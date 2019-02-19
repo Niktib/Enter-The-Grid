@@ -14,7 +14,7 @@ class GridWorld:
 		for i in range(self.y):
 			self.board[i] = [None] * self.y
 			
-	def setTerminal(self, terminal= [[0,0], [3,3]]):
+	def setTerminal(self, terminal= [[0,0], [self.x, self.y]]):
 		#places terminal messages in grid locations assigned
 		for i in range(self.x):
 			for j in range(self.y):
