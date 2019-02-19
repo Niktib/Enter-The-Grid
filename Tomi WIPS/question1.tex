@@ -1,0 +1,81 @@
+\documentclass[12pt]{extarticle}
+%Some packages I commonly use.
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage[top=1 in,bottom=1in, left=1 in, right=1 in]{geometry}
+
+%A bunch of definitions that make my life easier
+\newcommand{\matlab}{{\sc Matlab} }
+\newcommand{\cvec}[1]{{\mathbf #1}}
+\newcommand{\rvec}[1]{\vec{\mathbf #1}}
+\newcommand{\ihat}{\hat{\textbf{\i}}}
+\newcommand{\jhat}{\hat{\textbf{\j}}}
+\newcommand{\khat}{\hat{\textbf{k}}}
+\newcommand{\minor}{{\rm minor}}
+\newcommand{\trace}{{\rm trace}}
+\newcommand{\spn}{{\rm Span}}
+\newcommand{\rem}{{\rm rem}}
+\newcommand{\ran}{{\rm range}}
+\newcommand{\range}{{\rm range}}
+\newcommand{\mdiv}{{\rm div}}
+\newcommand{\proj}{{\rm proj}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\attn}[1]{\textbf{#1}}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{note}{Note}
+\newtheorem{exercise}{Exercise}
+\newcommand{\bproof}{\bigskip {\bf Proof. }}
+\newcommand{\eproof}{\hfill\qedsymbol}
+\newcommand{\Disp}{\displaystyle}
+\newcommand{\qe}{\hfill\(\bigtriangledown\)}
+\setlength{\columnseprule}{1 pt}
+
+
+\title{Rienforcement learning: Assignment 2}
+
+\author{
+  Oluwatomilayo, Adegbite\\
+  \texttt{500569283}
+  \and
+  Nikolas, Maier\\
+  \texttt{500461990}
+}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+\subsection{Exercise 3.17}
+Must give action value $q_\pi$(a,s)  in terms of $q_\pi$(a',s') \\ 
+
+$q_\pi$(a,s) =  $E_\pi$[$G_t$ $ \mid $ $S_t$ = s , $A_t$ = s   ] \\  \\
+ 
+$V_\pi$(s) =  $\sum_a$ $\pi$(s,a) $\sum$$P_{s s'}^ a$ ($R_{s s'}^ a$ +  $\alpha$ $V_\pi$(s')) \\ \\
+
+$q_\pi$(a,s) =  $\sum_{s'}$$P_{s s'}^ a$ ($R_{s s'}^ a$ +   $\sum_{a'}$ $\alpha$  $q_\pi$(a',s'))
+
+\subsection{Exercise 3.19} 
+
+
+$q_\pi$(a,s) =  $E$ [$R_{t+1}$ + $\alpha$ $V_\pi$( $s'_{t+1}$)  $ \mid $ $S_t$ = s , $A_t$ = s   ] \\  \\
+
+\end{document}
