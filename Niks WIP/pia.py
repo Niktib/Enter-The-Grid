@@ -1,5 +1,7 @@
+import random
+from datetime import datetime
 
-class ValueIteration:
+class PolicyIteration:
 	def __init__(self, p1=0.8, p2=0.1, rUp=-1, rDown=-1, rRight=-1, rLeft=-1, x=4,  y=4, discount=0.95, accuracy=0.001):
 		self.rUp = rUp
 		self.rDown = rDown
@@ -45,20 +47,32 @@ class ValueIteration:
 		for i in self.value: print(i)
 		print("\n")
 
-	def bellmanBackup(self, i, j):
+	def bellmanBackup(self, i, j, direction):
 	#j is x-axis, so left is -1 and right is +1
 	#i is y-axis, so up is -1 and down is +1
+		reward = 0
+		if direction == 1: 
+			#Up
+			reward = self.rUp
+			arr = [-1, 0, -1, 1, -1, -1]
+		elif direction == 2: 
+			#Down
+			reward = self.rDown
+			arr = [1, 0, 1, -1, 1, 1]
+		elif direction == 3: 
+			#Left
+			reward = self.rLeft
+			arr = [0, -1, -1, -1, 1, -1]
+		elif direction == 4: 
+			#Right
+			reward = self.rRight
+			arr = [0, 1, 1, 1, -1, 1]
+			
 		adjacent = (1 - (self.p1 + self.p2)) / 2 
 		#Going Up
-		action1 = (self.p1 *(self.rUp + self.Discount * self.errorCheck(i-1, j))) + (self.p2 *(self.rUp + self.Discount * self.errorCheck(i, j))) + (adjacent *(self.rUp + self.Discount * self.errorCheck(i-1, j+1))) + (adjacent *(self.rUp + self.Discount * self.errorCheck(i-1, j-1)))
-		#Going down
-		action2 = (self.p1 *(self.rDown + self.Discount * self.errorCheck(i+1, j))) + (self.p2 *(self.rDown + self.Discount * self.errorCheck(i, j))) + (adjacent *(self.rDown + self.Discount * self.errorCheck(i+1, j+1))) + (adjacent *(self.rDown + self.Discount * self.errorCheck(i+1, j-1)))
-		#Going left
-		action3 = (self.p1 *(self.rLeft + self.Discount * self.errorCheck(i, j-1))) + (self.p2 *(self.rLeft + self.Discount * self.errorCheck(i, j))) + (adjacent *(self.rLeft + self.Discount * self.errorCheck(i-1, j-1))) + (adjacent *(self.rLeft + self.Discount * self.errorCheck(i+1, j-1)))
-		#Going right
-		action4 = (self.p1 *(self.rRight + self.Discount * self.errorCheck(i, j+1))) + (self.p2 *(self.rRight + self.Discount * self.errorCheck(i, j))) + (adjacent *(self.rRight + self.Discount * self.errorCheck(i-1, j+1))) + (adjacent *(self.rRight + self.Discount * self.errorCheck(i+1, j+1)))
+		action = (self.p1 *(reward + self.Discount * self.errorCheck(i + arr[0], j + arr[1]))) + (self.p2 *(reward + self.Discount * self.errorCheck(i, j))) + (adjacent *(self.rUp + self.Discount * self.errorCheck(i + arr[2], j + arr[3]))) + (adjacent *(self.rUp + self.Discount * self.errorCheck(i + arr[4], j + arr[5])))
 		
-		return max([action1, action2, action3, action4])
+		return action
 	
 	def errorCheck(self, i, j):
 		if i < 0: i = 0
@@ -69,6 +83,7 @@ class ValueIteration:
 		if type(self.value[i][j]) is str : return 0
 		return self.value[i][j]
 	
-test = ValueIteration(0.1,0.5,-1,-1,-1,-1,5,4)
+test = PolicyIteration(0.1,0.5,-1,-1,-1,-1,5,4)
 test.printOut()
 test.iteration(100)
+		
