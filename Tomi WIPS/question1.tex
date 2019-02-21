@@ -65,17 +65,21 @@
 
 \section{}
 \subsection{Exercise 3.17}
-Must give action value $q_\pi$(a,s)  in terms of $q_\pi$(a',s') \\ 
+Must give action value $q_\pi$(s,a)  in terms of $q_\pi$(s',a') \\ 
 
-$q_\pi$(a,s) =  $E_\pi$[$G_t$ $ \mid $ $S_t$ = s , $A_t$ = s   ] \\  \\
- 
+
+$q_\pi$(s,a) =  $E_\pi$[$G_t$ $ \mid $ $S_t$ = s , $A_t$ = s   ] \\   \\
+=  $E_\pi [  $$\sum_{k=0}^{ \infty}$$ \gamma^k R_{t+k+1}  \mid S_t = s , A_t = s   ]$ \\  \\
+
 $V_\pi$(s) =  $\sum_a$ $\pi$(s,a) $\sum$$P_{s s'}^ a$ ($R_{s s'}^ a$ +  $\alpha$ $V_\pi$(s')) \\ \\
 
-$q_\pi$(a,s) =  $\sum_{s'}$$P_{s s'}^ a$ ($R_{s s'}^ a$ +   $\sum_{a'}$ $\alpha$  $q_\pi$(a',s'))
+$q_\pi$(s,a) =  $\sum_{s'}$$P_{s s'}^ a$ ($R_{s s'}^ a$ +   $\sum_{a'}$ $\alpha$  $q_\pi$(s',a'))  \\ \\
+  To get the value of all possible successor states sum over s', multiply the probability of moving from current state to next state given action a by the result of the reward of that action and state transition and the sum of all possible actions in s' times a discount times the value of $q_\pi$(s',a')
 
 \subsection{Exercise 3.19} 
 
+$q_\pi$(s,a) =  $E$[$G_t$ $ \mid $ $S_t$ = s , $A_t$ = s   ] \\   \\
 
-$q_\pi$(a,s) =  $E$ [$R_{t+1}$ + $\alpha$ $V_\pi$( $s'_{t+1}$)  $ \mid $ $S_t$ = s , $A_t$ = s   ] \\  \\
+$q_\pi$(s,a) =  $E$ [$R_{t+1}$ + $\alpha$ $V_\pi$( $s'_{t+1}$)  $ \mid $ $S_t$ = s , $A_t$ = s   ] \\  \\
 
 \end{document}
