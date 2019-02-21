@@ -82,16 +82,13 @@ G_t = p(s'  \mid s,a) = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3}  + ...  = \s
 
 $G_t$ represents the discounted future reward 
 
- \begin{equation}
-\begin{split}
-q_\pi(s,a)  =  E_\pi [ G_t  \mid S_t = s , A_t = s   ]  \\  \\
-  =  E_\pi [  \sum_{k=0}^{ \infty} \gamma^k R_{t+k+1}  \mid S_t = s , A_t = s   ]  \\ \\
-  =  E_\pi [  \sum_{k=0}^{ \infty} \gamma^k R_{t+k+1}  \mid S_t = s , A_t = s   ]  \\ \\
-q_\pi(s,a) = E_\pi [  \sum_{s'}P_{s s'}^ a (R_{s s'}^ a +  \sum_{a'} \alpha  q_\pi(s',a'))   \mid S_t = s , A_t = s   ]
-\end{split}
-\end{equation} 
 
-
+\begin{flalign}
+q_\pi(s,a)  &=  E_\pi [ G_t  \mid S_t = s , A_t = s   ]  \\  \\
+  &=  E_\pi [  \sum_{k=0}^{ \infty} \gamma^k R_{t+k+1}  \mid S_t = s , A_t = s   ]  \\ \\
+  &=  E_\pi [  \sum_{k=0}^{ \infty} \gamma^k R_{t+k+1}  \mid S_t = s , A_t = s   ]  \\ \\
+q_\pi(s,a) &= E_\pi [  \sum_{s'}P_{s s'}^ a (R_{s s'}^ a +  \sum_{a'} \alpha  q_\pi(s',a'))   \mid S_t = s , A_t = s   ]
+\end{flalign}
 
   To get the value of all possible successor states sum over s', multiply the probability of moving from current state to next state given action a by the result of the reward of that action and state transition and the sum of all possible actions in s' times a discount times the value of $q_\pi$(s',a')
 
