@@ -1,5 +1,6 @@
 import random
 from datetime import datetime
+import time as time
 
 class PolicyIteration:
 	def __init__(self, p1=0.8, p2=0.1, rUp=-1, rDown=-1, rRight=-1, rLeft=-1, x=4,  y=4, discount=0.95, accuracy=0.001):
@@ -31,16 +32,22 @@ class PolicyIteration:
 
 	def policyIterating(self, numOfIterationsMax, printResults=False):
 		x = 0
-		#Intial policy setUp
+		#Intial policy setUp for each state
 		for i in range(self.x):
 			for j in range(self.y):
 				if type(self.value[i][j]) is not str :
 					self.policy[i][j] = self.randomMove()
 				else:
 					self.policy[i][j] = "T"
+		
+		#The loop of Policy Iteration
 		while True:
+			x+=1
+			start = time.time()
 			self.policyEvaluation(numOfIterationsMax, printResults)
 			if self.policyImprovement(): break
+			end = time.time()
+			print("Iteration: {} has taken {}".format(x, end-start))
 		self.printOutPolicy()
 		
 	def policyEvaluation(self, iterate, printResults = False):
@@ -172,7 +179,4 @@ class PolicyIteration:
 			return ">"
 		elif recPolicy == "T":
 			return "0"
-test = PolicyIteration(0.8,0.1,-1,-1,-1,-1,4,4)
-test.printOut()
-test.policyIterating(10000)
 		

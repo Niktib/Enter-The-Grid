@@ -1,3 +1,4 @@
+import time as time
 
 class ValueIteration:
 	def __init__(self, p1=0.8, p2=0.1, rUp=-1, rDown=-1, rRight=-1, rLeft=-1, x=4,  y=4, discount=0.95, accuracy=0.001):
@@ -30,6 +31,7 @@ class ValueIteration:
 		delta = 0
 		areWeDoneHere = False
 		for runTime in range(iterate):
+			start = time.time()
 			for i in range(self.x):
 				for j in range(self.y):
 					if type(self.value[i][j]) is not str :
@@ -41,12 +43,13 @@ class ValueIteration:
 						if self.theta > max([delta, abs(oldValue-self.value[i][j])]): areWeDoneHere = True
 					else: 
 						self.policy[i][j] = "T"
+			end = time.time()
+			print("Iteration: {} has taken {}\n".format(runTime+1, end-start))
 			if printResults:
-				print("For Iteration {}:\n".format(runTime+1))
 				self.printOut()
 			if areWeDoneHere: break
 		self.printOutPolicy()
-		print(str(runTime) + "\n")
+		
 	def printOut(self):
 		for i in self.value: print(i)
 		print("\n")
@@ -108,9 +111,3 @@ class ValueIteration:
 			return ">"
 		elif recPolicy == "T":
 			return "0"
-			
-			
-			
-test = ValueIteration(0.8,0.1,-1,-1,-1,-1,4,4)
-test.printOut()
-test.iteration(10, True)
