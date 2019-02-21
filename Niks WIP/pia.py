@@ -1,8 +1,14 @@
+# Name, Student Number
+# Oluwatomilayo Adegbite, 500569283
+# Nikolas Maier, 500461990
+
 import random
 from datetime import datetime
+import time as time
 
 class PolicyIteration:
 	def __init__(self, p1=0.8, p2=0.1, rUp=-1, rDown=-1, rRight=-1, rLeft=-1, x=4,  y=4, discount=0.95, accuracy=0.001):
+		#Initializes all the reoccuring values that are relevant to the test
 		self.rUp = rUp
 		self.rDown = rDown
 		self.rLeft = rLeft
@@ -15,6 +21,7 @@ class PolicyIteration:
 		
 		self.x = x
 		self.y = y
+		#Creates the array to store all the states and all the Policy
 		self.value = [0] * self.x
 		self.policy = [0] * self.x
 		for i in range(self.x):
@@ -31,19 +38,27 @@ class PolicyIteration:
 
 	def policyIterating(self, numOfIterationsMax, printResults=False):
 		x = 0
-		#Intial policy setUp
+		#Intial policy setUp for each state
 		for i in range(self.x):
 			for j in range(self.y):
 				if type(self.value[i][j]) is not str :
 					self.policy[i][j] = self.randomMove()
 				else:
 					self.policy[i][j] = "T"
+		
+		#The loop of Policy Iteration
 		while True:
+			x+=1
+			start = time.time()
 			self.policyEvaluation(numOfIterationsMax, printResults)
 			if self.policyImprovement(): break
+			end = time.time()
+			print("Iteration: {} has taken {}".format(x, end-start))
 		self.printOutPolicy()
 		
 	def policyEvaluation(self, iterate, printResults = False):
+		#Policy evaluation loop
+		#Takes the current policy action and does the math to check if we need to keep looping.
 		delta = 0
 		areWeDoneHere = False
 		for runTime in range(iterate):
@@ -63,11 +78,13 @@ class PolicyIteration:
 			if areWeDoneHere: break
 		
 	def printOut(self):
+		#prints out the Value array in a rough grid formation
 		for i in self.value: print(i)
 		print("\n")
 		
 		
 	def policyImprovement(self):
+		#Basic policy improvement loop that checks if there exists an action that is better than the current Policy action
 		policyStable = True
 		for i in range(self.x):
 			for j in range(self.y):
@@ -130,7 +147,9 @@ class PolicyIteration:
 		
 		if type(self.value[i][j]) is str : return 0
 		return self.value[i][j]
+		
 	def randomMove(self):
+		#Exactly what it says on the tin, for the first assigning of policy action we need to pick it randomly. That is what this does
 		move = random.random()
 		if move < 0.25:
 			return self.actions[0]
@@ -142,6 +161,7 @@ class PolicyIteration:
 			return self.actions[3]
 			
 	def printOutPolicy(self):
+	#Outputs a pretty grid where each grid center is replaced with the policy for that state
 		self.policy 
 		pStr = "\t"
 		for i in range(self.x): pStr = pStr + "____" 
@@ -162,6 +182,7 @@ class PolicyIteration:
 		print(pStr)
 	
 	def printPretty(self, recPolicy):
+	#Replaces the numeric actions in policy with arrows to make the grid more legible
 		if recPolicy == 0:
 			return "^"
 		elif recPolicy == 1:
@@ -172,7 +193,4 @@ class PolicyIteration:
 			return ">"
 		elif recPolicy == "T":
 			return "0"
-test = PolicyIteration(0.8,0.1,-1,-1,-1,-1,4,4)
-test.printOut()
-test.policyIterating(10000)
 		
