@@ -1,3 +1,7 @@
+# Name, Student Number
+# Oluwatomilayo Adegbite, 500569283
+# Nikolas Maier, 500461990
+
 import random
 from datetime import datetime
 import time as time

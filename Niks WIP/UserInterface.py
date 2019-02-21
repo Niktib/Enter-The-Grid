@@ -1,3 +1,6 @@
+# Name, Student Number
+# Oluwatomilayo Adegbite, 500569283
+# Nikolas Maier, 500461990
 import pia as PIA
 import via as VIA
 
