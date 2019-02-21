@@ -9,12 +9,15 @@ class ValueIteration:
 		self.theta = accuracy
 		self.p1 = p1
 		self.p2 = p2
+		self.actions = [0,1,2,3]
 		
 		self.x = x
 		self.y = y
 		self.value = [0] * self.x
+		self.policy = [0] * self.x
 		for i in range(self.x):
 			self.value[i] = [0] * self.y
+			self.policy[i] = [0] * self.y
 			
 		self.setTerminal()
 			
@@ -23,7 +26,7 @@ class ValueIteration:
 		self.value[0][0] = "T"
 		self.value[self.x-1] [self.y-1] = "T"
 					
-	def iteration(self, iterate):
+	def iteration(self, iterate, printResults=False):
 		delta = 0
 		areWeDoneHere = False
 		for runTime in range(iterate):
@@ -32,15 +35,18 @@ class ValueIteration:
 					if type(self.value[i][j]) is not str :
 						oldValue = 0
 						oldValue = self.value[i][j]
-						self.value[i][j] = self.bellmanBackup(i, j)
-						if self.theta > (abs(oldValue-self.value[i][j])): areWeDoneHere = True
+						results = self.bellmanBackup(i, j)
+						self.value[i][j] = results[0]
+						self.policy[i][j] = results[1]
+						if self.theta > max([delta, abs(oldValue-self.value[i][j])]): areWeDoneHere = True
+					else: 
+						self.policy[i][j] = "T"
+			if printResults:
+				print("For Iteration {}:\n".format(runTime+1))
+				self.printOut()
 			if areWeDoneHere: break
-			print("For Iteration {}:\n".format(runTime+1))
-			self.printOut()
-		
-		print("Final Iteration {}:\n".format(runTime+1))
-		self.printOut()
-				
+		self.printOutPolicy()
+		print(str(runTime) + "\n")
 	def printOut(self):
 		for i in self.value: print(i)
 		print("\n")
@@ -58,7 +64,9 @@ class ValueIteration:
 		#Going right
 		action4 = (self.p1 *(self.rRight + self.Discount * self.errorCheck(i, j+1))) + (self.p2 *(self.rRight + self.Discount * self.errorCheck(i, j))) + (adjacent *(self.rRight + self.Discount * self.errorCheck(i-1, j+1))) + (adjacent *(self.rRight + self.Discount * self.errorCheck(i+1, j+1)))
 		
-		return max([action1, action2, action3, action4])
+		arrayOfActions = [action1, action2, action3, action4]
+		
+		return [max(arrayOfActions), arrayOfActions.index(max(arrayOfActions))]
 	
 	def errorCheck(self, i, j):
 		if i < 0: i = 0
@@ -69,6 +77,40 @@ class ValueIteration:
 		if type(self.value[i][j]) is str : return 0
 		return self.value[i][j]
 	
-test = ValueIteration(0.1,0.5,-1,-1,-1,-1,5,4)
+	def printOutPolicy(self):
+		self.policy 
+		pStr = "\t"
+		for i in range(self.x): pStr = pStr + "____" 
+		pStr = pStr + "_\n"
+		for i in range(self.x):
+			
+			pStr = pStr + "\t"
+			for j in range(self.y):
+				pStr = pStr + "|   "
+			pStr = pStr + "|\n\t"
+			for j in range(self.y):
+				printingValue = self.printPretty(self.policy[i][j])
+				pStr = pStr + "| " + printingValue + " "
+			pStr = pStr + "|\n\t"
+			for j in range(self.y):
+				pStr = pStr + "|___"
+			pStr = pStr + "|\n"
+		print(pStr)
+	
+	def printPretty(self, recPolicy):
+		if recPolicy == 0:
+			return "^"
+		elif recPolicy == 1:
+			return "v"
+		elif recPolicy == 2:
+			return "<"
+		elif recPolicy == 3:
+			return ">"
+		elif recPolicy == "T":
+			return "0"
+			
+			
+			
+test = ValueIteration(0.8,0.1,-1,-1,-1,-1,4,4)
 test.printOut()
-test.iteration(100)
+test.iteration(10, True)

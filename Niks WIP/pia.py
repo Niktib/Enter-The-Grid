@@ -11,12 +11,15 @@ class PolicyIteration:
 		self.theta = accuracy
 		self.p1 = p1
 		self.p2 = p2
+		self.actions = [0,1,2,3]
 		
 		self.x = x
 		self.y = y
 		self.value = [0] * self.x
+		self.policy = [0] * self.x
 		for i in range(self.x):
 			self.value[i] = [0] * self.y
+			self.policy[i] = [0] * self.y
 			
 		self.setTerminal()
 			
@@ -24,8 +27,23 @@ class PolicyIteration:
 		#places terminal messages in grid locations assigned
 		self.value[0][0] = "T"
 		self.value[self.x-1] [self.y-1] = "T"
-					
-	def iteration(self, iterate):
+	
+
+	def policyIterating(self, numOfIterationsMax, printResults=False):
+		x = 0
+		#Intial policy setUp
+		for i in range(self.x):
+			for j in range(self.y):
+				if type(self.value[i][j]) is not str :
+					self.policy[i][j] = self.randomMove()
+				else:
+					self.policy[i][j] = "T"
+		while True:
+			self.policyEvaluation(numOfIterationsMax, printResults)
+			if self.policyImprovement(): break
+		self.printOutPolicy()
+		
+	def policyEvaluation(self, iterate, printResults = False):
 		delta = 0
 		areWeDoneHere = False
 		for runTime in range(iterate):
@@ -34,47 +52,77 @@ class PolicyIteration:
 					if type(self.value[i][j]) is not str :
 						oldValue = 0
 						oldValue = self.value[i][j]
-						self.value[i][j] = self.bellmanBackup(i, j)
-						if self.theta > (abs(oldValue-self.value[i][j])): areWeDoneHere = True
+						self.value[i][j] = self.bellmanBackup(i, j, self.policy[i][j])
+						if self.theta > max([delta, abs(oldValue-self.value[i][j])]):
+							areWeDoneHere = True
+					else:
+						self.policy[i][j] = "T"
+			if printResults:
+				print("For Iteration {}:\n".format(runTime+1))
+				self.printOut()
 			if areWeDoneHere: break
-			print("For Iteration {}:\n".format(runTime+1))
-			self.printOut()
 		
-		print("Final Iteration {}:\n".format(runTime+1))
-		self.printOut()
-				
 	def printOut(self):
 		for i in self.value: print(i)
 		print("\n")
+		
+		
+	def policyImprovement(self):
+		policyStable = True
+		for i in range(self.x):
+			for j in range(self.y):
+				if type(self.value[i][j]) is not str :
+					action = self.policy[i][j]
+					self.policy[i][j] = self.policyImpMath(i,j)
+					if action != self.policy[i][j]: policyStable = False
+		return policyStable
 
+		
+	def policyImpMath(self, i, j):
+	#Checks all actions from current state to see if there is a better option at the moment
+		adjacent = (1 - (self.p1 + self.p2)) / 2 
+		#Going Up
+		action1 = (self.p1 *(self.rUp + self.Discount * self.errorCheck(i-1, j))) + (self.p2 *(self.rUp + self.Discount * self.errorCheck(i, j))) + (adjacent *(self.rUp + self.Discount * self.errorCheck(i-1, j+1))) + (adjacent *(self.rUp + self.Discount * self.errorCheck(i-1, j-1)))
+		#Going down
+		action2 = (self.p1 *(self.rDown + self.Discount * self.errorCheck(i+1, j))) + (self.p2 *(self.rDown + self.Discount * self.errorCheck(i, j))) + (adjacent *(self.rDown + self.Discount * self.errorCheck(i+1, j+1))) + (adjacent *(self.rDown + self.Discount * self.errorCheck(i+1, j-1)))
+		#Going left
+		action3 = (self.p1 *(self.rLeft + self.Discount * self.errorCheck(i, j-1))) + (self.p2 *(self.rLeft + self.Discount * self.errorCheck(i, j))) + (adjacent *(self.rLeft + self.Discount * self.errorCheck(i-1, j-1))) + (adjacent *(self.rLeft + self.Discount * self.errorCheck(i+1, j-1)))
+		#Going right
+		action4 = (self.p1 *(self.rRight + self.Discount * self.errorCheck(i, j+1))) + (self.p2 *(self.rRight + self.Discount * self.errorCheck(i, j))) + (adjacent *(self.rRight + self.Discount * self.errorCheck(i-1, j+1))) + (adjacent *(self.rRight + self.Discount * self.errorCheck(i+1, j+1)))
+		
+		arrayOfActions = [action1, action2, action3, action4]
+		
+		return arrayOfActions.index(max(arrayOfActions))
 	def bellmanBackup(self, i, j, direction):
 	#j is x-axis, so left is -1 and right is +1
 	#i is y-axis, so up is -1 and down is +1
+	#Below we have an array assigned the changes of values based on each option of where a move can end up
 		reward = 0
-		if direction == 1: 
+		if direction == 0: 
 			#Up
 			reward = self.rUp
 			arr = [-1, 0, -1, 1, -1, -1]
-		elif direction == 2: 
+		elif direction == 1: 
 			#Down
 			reward = self.rDown
 			arr = [1, 0, 1, -1, 1, 1]
-		elif direction == 3: 
+		elif direction == 2: 
 			#Left
 			reward = self.rLeft
 			arr = [0, -1, -1, -1, 1, -1]
-		elif direction == 4: 
+		elif direction == 3: 
 			#Right
 			reward = self.rRight
 			arr = [0, 1, 1, 1, -1, 1]
 			
 		adjacent = (1 - (self.p1 + self.p2)) / 2 
-		#Going Up
+		#One stupid big math equation of each possible Probability * ( Action, Reward and S') combination
 		action = (self.p1 *(reward + self.Discount * self.errorCheck(i + arr[0], j + arr[1]))) + (self.p2 *(reward + self.Discount * self.errorCheck(i, j))) + (adjacent *(self.rUp + self.Discount * self.errorCheck(i + arr[2], j + arr[3]))) + (adjacent *(self.rUp + self.Discount * self.errorCheck(i + arr[4], j + arr[5])))
 		
 		return action
 	
 	def errorCheck(self, i, j):
+		#ErrorCheck makes sure that if the S' state is outside of the grid it gets pushed back into an actual state.
 		if i < 0: i = 0
 		elif i > self.x - 1: i = self.x - 1
 		if j < 0: j = 0
@@ -82,8 +130,49 @@ class PolicyIteration:
 		
 		if type(self.value[i][j]) is str : return 0
 		return self.value[i][j]
+	def randomMove(self):
+		move = random.random()
+		if move < 0.25:
+			return self.actions[0]
+		elif move < 0.50:
+			return self.actions[1]
+		elif move < 0.75:
+			return self.actions[2]
+		else:
+			return self.actions[3]
+			
+	def printOutPolicy(self):
+		self.policy 
+		pStr = "\t"
+		for i in range(self.x): pStr = pStr + "____" 
+		pStr = pStr + "_\n"
+		for i in range(self.x):
+			
+			pStr = pStr + "\t"
+			for j in range(self.y):
+				pStr = pStr + "|   "
+			pStr = pStr + "|\n\t"
+			for j in range(self.y):
+				printingValue = self.printPretty(self.policy[i][j])
+				pStr = pStr + "| " + printingValue + " "
+			pStr = pStr + "|\n\t"
+			for j in range(self.y):
+				pStr = pStr + "|___"
+			pStr = pStr + "|\n"
+		print(pStr)
 	
-test = PolicyIteration(0.1,0.5,-1,-1,-1,-1,5,4)
+	def printPretty(self, recPolicy):
+		if recPolicy == 0:
+			return "^"
+		elif recPolicy == 1:
+			return "v"
+		elif recPolicy == 2:
+			return "<"
+		elif recPolicy == 3:
+			return ">"
+		elif recPolicy == "T":
+			return "0"
+test = PolicyIteration(0.8,0.1,-1,-1,-1,-1,4,4)
 test.printOut()
-test.iteration(100)
+test.policyIterating(10000)
 		
