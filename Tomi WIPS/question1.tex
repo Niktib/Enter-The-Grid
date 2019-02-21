@@ -66,20 +66,55 @@
 \section{}
 \subsection{Exercise 3.17}
 Must give action value $q_\pi$(s,a)  in terms of $q_\pi$(s',a') \\ 
+ \begin{equation}
+V_\pi(s) =  \sum_a \pi(s,a)  \sum P_{s s'}^ a (R_{s s'}^ a +  \alpha V_\pi(s')) \\ \\
+\end{equation} 
+The value function represented as a bellman equation taking state and summing over all possible actions in that state and value of successor states 
+
+ \begin{equation}
+ P_{s s'}^ a = p(s'  \mid s,a) = Pr\left\{ S_t = s' \mid S_{t-1} = s, A_{t-1} = a \right\} = \sum_{r \in R} p(s', r \mid s,a) 
+\end{equation} 
+Equation to represent probability of state transition given action and previous state is the same as probability of moving to successor state and receiving reward from future state and action
+
+ \begin{equation}
+G_t = p(s'  \mid s,a) = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3}  + ...  = \sum_{k=0}^{ \infty} \gamma^k R_{t+k+1} 
+\end{equation} 
+
+$G_t$ represents the discounted future reward 
+
+ \begin{equation}
+\begin{split}
+q_\pi(s,a)  =  E_\pi [ G_t  \mid S_t = s , A_t = s   ]  \\  \\
+  =  E_\pi [  \sum_{k=0}^{ \infty} \gamma^k R_{t+k+1}  \mid S_t = s , A_t = s   ]  \\ \\
+  =  E_\pi [  \sum_{k=0}^{ \infty} \gamma^k R_{t+k+1}  \mid S_t = s , A_t = s   ]  \\ \\
+q_\pi(s,a) = E_\pi [  \sum_{s'}P_{s s'}^ a (R_{s s'}^ a +  \sum_{a'} \alpha  q_\pi(s',a'))   \mid S_t = s , A_t = s   ]
+\end{split}
+\end{equation} 
 
 
-$q_\pi$(s,a) =  $E_\pi$[$G_t$ $ \mid $ $S_t$ = s , $A_t$ = s   ] \\   \\
-=  $E_\pi [  $$\sum_{k=0}^{ \infty}$$ \gamma^k R_{t+k+1}  \mid S_t = s , A_t = s   ]$ \\  \\
 
-$V_\pi$(s) =  $\sum_a$ $\pi$(s,a) $\sum$$P_{s s'}^ a$ ($R_{s s'}^ a$ +  $\alpha$ $V_\pi$(s')) \\ \\
-
-$q_\pi$(s,a) =  $\sum_{s'}$$P_{s s'}^ a$ ($R_{s s'}^ a$ +   $\sum_{a'}$ $\alpha$  $q_\pi$(s',a'))  \\ \\
   To get the value of all possible successor states sum over s', multiply the probability of moving from current state to next state given action a by the result of the reward of that action and state transition and the sum of all possible actions in s' times a discount times the value of $q_\pi$(s',a')
 
 \subsection{Exercise 3.19} 
 
-$q_\pi$(s,a) =  $E$[$G_t$ $ \mid $ $S_t$ = s , $A_t$ = s   ] \\   \\
+ \begin{equation}
+\begin{split}
+G_t = p(s'  \mid s,a) = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \gamma^3 R_{t+4}  + ...   \\ 
+ =  R_{t+1} + \gamma (R_{t+2} + \gamma R_{t+3}  + \gamma^2 R_{t+4} + ...)  \\
+ = R_{t+1} + \gamma G_{t+1}
+\end{split}
+\end{equation} 
 
-$q_\pi$(s,a) =  $E$ [$R_{t+1}$ + $\alpha$ $V_\pi$( $s'_{t+1}$)  $ \mid $ $S_t$ = s , $A_t$ = s   ] \\  \\
+$G_t$ can be represented as current reward + discounted future reward 
+
+ \begin{equation}
+q_\pi(s,a) =  E[G_t \mid S_t = s ,  A_t = s   ] \\   \\
+\end{equation} 
+
+ \begin{equation}
+q_\pi(s,a) =   E [R_{t+1} + \alpha V_\pi( s'_{t+1})   \mid S_t = s , A_t = s   ] \\  \\
+\end{equation} 
+
+$q_\pi(s,a)$ Given in terms of future expected reward considering discount and expected value of future states
 
 \end{document}
