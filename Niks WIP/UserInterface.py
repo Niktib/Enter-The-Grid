@@ -3,7 +3,7 @@
 # Nikolas Maier, 500461990
 import pia as PIA
 import via as VIA
-
+'''
 print("Let's run some Dynamic Programming \n")
 print("First pick which kind of Iteration you want: \n")
 
@@ -52,4 +52,3 @@ test.policyIterating(1000)
 print("Value Iteration:\n")
 test = VIA.ValueIteration(0.8,0.1,-1,-1,-1,-1,4,4)
 test.iteration(10000)
-'''

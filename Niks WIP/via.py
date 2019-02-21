@@ -5,6 +5,7 @@ import time as time
 
 class ValueIteration:
 	def __init__(self, p1=0.8, p2=0.1, rUp=-1, rDown=-1, rRight=-1, rLeft=-1, x=4,  y=4, discount=0.95, accuracy=0.001):
+		#Initializes all the reoccuring values that are relevant to the test
 		self.rUp = rUp
 		self.rDown = rDown
 		self.rLeft = rLeft
@@ -17,6 +18,7 @@ class ValueIteration:
 		
 		self.x = x
 		self.y = y
+		#Creates the array to store all the states and all the Policy
 		self.value = [0] * self.x
 		self.policy = [0] * self.x
 		for i in range(self.x):
@@ -31,6 +33,9 @@ class ValueIteration:
 		self.value[self.x-1] [self.y-1] = "T"
 					
 	def iteration(self, iterate, printResults=False):
+	#The Value Iteration loop
+	#The optional printResults can be set to true in order to print out the arrays in a roughly grid like formation
+	#if the user wants to see the values for each state changing as it runs
 		delta = 0
 		areWeDoneHere = False
 		for runTime in range(iterate):
@@ -51,9 +56,11 @@ class ValueIteration:
 			if printResults:
 				self.printOut()
 			if areWeDoneHere: break
+		#Here we have the Policy grid print out
 		self.printOutPolicy()
 		
 	def printOut(self):
+	#Prints out the Value array in rough grid formation
 		for i in self.value: print(i)
 		print("\n")
 
@@ -71,10 +78,12 @@ class ValueIteration:
 		action4 = (self.p1 *(self.rRight + self.Discount * self.errorCheck(i, j+1))) + (self.p2 *(self.rRight + self.Discount * self.errorCheck(i, j))) + (adjacent *(self.rRight + self.Discount * self.errorCheck(i-1, j+1))) + (adjacent *(self.rRight + self.Discount * self.errorCheck(i+1, j+1)))
 		
 		arrayOfActions = [action1, action2, action3, action4]
-		
+		#Returns the action with the highest value as well as the action that represents it (Up, down, left right)
+		#The actions correctly correspond to the index in the array
 		return [max(arrayOfActions), arrayOfActions.index(max(arrayOfActions))]
 	
 	def errorCheck(self, i, j):
+		#ErrorCheck makes sure that if the S' state is outside of the grid it gets pushed back into an actual state.
 		if i < 0: i = 0
 		elif i > self.x - 1: i = self.x - 1
 		if j < 0: j = 0
@@ -84,6 +93,7 @@ class ValueIteration:
 		return self.value[i][j]
 	
 	def printOutPolicy(self):
+	#Outputs a pretty grid where each grid center is replaced with the policy for that state
 		self.policy 
 		pStr = "\t"
 		for i in range(self.x): pStr = pStr + "____" 
@@ -104,6 +114,7 @@ class ValueIteration:
 		print(pStr)
 	
 	def printPretty(self, recPolicy):
+	#Replaces the numeric actions in policy with arrows to make the grid more legible
 		if recPolicy == 0:
 			return "^"
 		elif recPolicy == 1:
