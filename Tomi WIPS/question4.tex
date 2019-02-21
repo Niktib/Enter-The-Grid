@@ -1,0 +1,90 @@
+\documentclass[12pt]{extarticle}
+%Some packages I commonly use.
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage[top=1 in,bottom=1in, left=1 in, right=1 in]{geometry}
+
+%A bunch of definitions that make my life easier
+\newcommand{\matlab}{{\sc Matlab} }
+\newcommand{\cvec}[1]{{\mathbf #1}}
+\newcommand{\rvec}[1]{\vec{\mathbf #1}}
+\newcommand{\ihat}{\hat{\textbf{\i}}}
+\newcommand{\jhat}{\hat{\textbf{\j}}}
+\newcommand{\khat}{\hat{\textbf{k}}}
+\newcommand{\minor}{{\rm minor}}
+\newcommand{\trace}{{\rm trace}}
+\newcommand{\spn}{{\rm Span}}
+\newcommand{\rem}{{\rm rem}}
+\newcommand{\ran}{{\rm range}}
+\newcommand{\range}{{\rm range}}
+\newcommand{\mdiv}{{\rm div}}
+\newcommand{\proj}{{\rm proj}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\attn}[1]{\textbf{#1}}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{note}{Note}
+\newtheorem{exercise}{Exercise}
+\newcommand{\bproof}{\bigskip {\bf Proof. }}
+\newcommand{\eproof}{\hfill\qedsymbol}
+\newcommand{\Disp}{\displaystyle}
+\newcommand{\qe}{\hfill\(\bigtriangledown\)}
+\setlength{\columnseprule}{1 pt}
+
+
+\title{Rienforcement learning: Assignment 2}
+
+\author{
+  Oluwatomilayo, Adegbite\\
+  \texttt{500569283}xercise 3.19
+  \and
+  Nikolas, Maier\\
+  \texttt{500461990}
+}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+\subsection{Question 4} 
+
+
+ \begin{equation}
+V^\pi(s) = R_s^{\pi (s)} + \gamma \sum_{s' \in S}  P_{s s'}^{ \pi (s)} V_\pi(s') \\ 
+\end{equation} 
+
+Let $\pi' = greedy(V_{apr})$
+
+ \begin{equation}
+\pi'(s) = arg \max_{a \in A} \left\{ R_s^{a} + \gamma \sum_{s' \in S}  P_{s s'}^{a} V_{apr}(s')\right\} \\ 
+\end{equation} 
+
+ \begin{equation}
+L^\pi(s) = V^*(s) - V^{\pi'}(s)
+\end{equation} 
+
+ \begin{equation}
+ \max_{s \in S} \left\{ L^{\pi'}(s) \right\} \leq\dfrac{ 2\gamma \epsilon}{1 - \gamma}
+\end{equation} 
+Must show that $ \mid V^*(s) - V_{apr}(s) \mid \leq  \epsilon $ for every state s
+
+\end{document}
