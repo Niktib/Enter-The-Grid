@@ -97,13 +97,12 @@ q_\pi(s,a) = E_\pi [  \sum_{s'}P_{s s'}^ a (R_{s s'}^ a +  \sum_{a'} \alpha  q_\
 
 \subsection{Exercise 3.19} 
 
- \begin{equation}
-\begin{split}
-G_t = p(s'  \mid s,a) = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \gamma^3 R_{t+4}  + ...   \\ 
- =  R_{t+1} + \gamma (R_{t+2} + \gamma R_{t+3}  + \gamma^2 R_{t+4} + ...)  \\
- = R_{t+1} + \gamma G_{t+1}
-\end{split}
-\end{equation} 
+\begin{flalign}
+G_t &= p(s'  \mid s,a) = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \gamma^3 R_{t+4}  + ...   \\ 
+ &=  R_{t+1} + \gamma (R_{t+2} + \gamma R_{t+3}  + \gamma^2 R_{t+4} + ...)  \\
+ &= R_{t+1} + \gamma G_{t+1}
+\end{flalign}
+
 
 $G_t$ can be represented as current reward + discounted future reward 
 
