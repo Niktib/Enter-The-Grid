@@ -135,7 +135,7 @@ $q_\pi(s,a)$ Given in terms of future expected reward considering discount and e
 \begin{flalign}
 q_\pi(s,a)  &=  E_\pi [ G_t  \mid S_t = s , A_t = a   ]  \\  
   &=  E_\pi [  \sum_{k=0}^{ \infty} \gamma^k R_{t+k+1}  \mid S_t = s , A_t = a   ]  \\ 
-  &=  E_\pi [  \sum_{k=0}^{ \infty} \gamma^k R_{t+k+1}  \mid S_t = s , A_t = a   ]  \\ 
+  &=  E_\pi [   R_{t+1} + \gamma G_{t+1}   \mid S_t = s , A_t = a   ]  \\ 
 q_\pi(s,a) &=  \sum_{s'} p(s', r \mid s,a)  (R_{s s'}^ a +  \sum_{a'} \alpha  q_\pi(s',a'))  
 \end{flalign}
 

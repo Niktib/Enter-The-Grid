@@ -67,9 +67,13 @@
 
 \subsection{Question 4} 
 
+ \begin{equation}
+R_s^{a} = \sum_{s'}  P_{s s'}^{a} R_{s s'}^a \\ 
+\end{equation} 
+
 
  \begin{equation}
-V^\pi(s) = R_s^{\pi (s)} + \gamma \sum_{s' \in S}  P_{s s'}^{ \pi (s)} V_\pi(s') \\ 
+V^\pi(s) = R_s^{\pi (s)} + \gamma \sum_{s' \in S}  P_{s s'}^{ \pi (s)} V^\pi(s') \\ 
 \end{equation} 
 
 Let $\pi' = greedy(V_{apr})$
@@ -85,6 +89,23 @@ L^\pi(s) = V^*(s) - V^{\pi'}(s)
  \begin{equation}
  \max_{s \in S} \left\{ L^{\pi'}(s) \right\} \leq\dfrac{ 2\gamma \epsilon}{1 - \gamma}
 \end{equation} 
-Must show that $ \mid V^*(s) - V_{apr}(s) \mid \leq  \epsilon $ for every state s
+Must show that if $ \mid V^*(s) - V_{apr}(s) \mid \leq  \epsilon$ then $ \max_{s \in S} \left\{ L^{\pi'}(s) \right\}  \leq \dfrac{ 2\gamma \epsilon}{1 - \gamma}   $ for every state s, that is the Loss between the optimal value function and the approximated value function is less then accuracy exptected the policy is optimal.
+
+
+\subsubsection{Proof} 
+ 
+Since 
+
+ \begin{equation}
+V^\pi(s) = R_s^{\pi (s)} + \gamma \sum_{s' \in S}  P_{s s'}^{ \pi (s)} V^\pi(s') \\ 
+\end{equation} 
+
+
+\begin{flalign}
+ \max_{s \in S} \left\{ L^{\pi'}(s) \right\} &\leq \dfrac{ 2\gamma \epsilon}{1 - \gamma} \\
+  \max_{s \in S} \left\{  V^*(s) - V^{\pi'}(s)\right\} &\leq \dfrac{ 2\gamma \epsilon}{1 - \gamma} \\
+    &\leq \dfrac{ 2\gamma \epsilon}{1 - \gamma} \\
+R_s^{*(s)} + \gamma \sum_{s' \in S}  P_{s s'}^{ *(s)} V^*(s') -  R_s^{\pi (s)} + \gamma \sum_{s' \in S}  P_{s s'}^{ \pi (s)} V^\pi(s') &\leq \dfrac{ 2\gamma \epsilon}{1 - \gamma} \\
+\end{flalign}
 
 \end{document}
