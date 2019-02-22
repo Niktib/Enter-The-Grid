@@ -96,7 +96,7 @@ q_\pi(s,a)  &=  E_\pi [ G_t  \mid S_t = s , A_t = s   ]  \\
 q_\pi(s,a) &= E_\pi [  \sum_{s'}P_{s s'}^ a (R_{s s'}^ a +  \sum_{a'} \alpha  q_\pi(s',a'))   \mid S_t = s , A_t = a   ]
 \end{flalign}
 
-(7) Represent expected future reward as next reward plus discounted future reward
+(7) Represent expected future reward as next reward plus discounted future reward \\
 (8) To get the value of all possible successor states sum over s', multiply the probability of moving from current state to next state given action a by the result of the reward of that action and state transition and the sum of all possible actions in s' times a discount times the value of $q_\pi$(s',a')
 
 \subsection{Exercise 3.19} 
@@ -138,5 +138,9 @@ q_\pi(s,a)  &=  E_\pi [ G_t  \mid S_t = s , A_t = a   ]  \\
   &=  E_\pi [   R_{t+1} + \gamma G_{t+1}   \mid S_t = s , A_t = a   ]  \\ 
 q_\pi(s,a) &=  \sum_{s'} p(s', r \mid s,a)  (R_{s s'}^ a +  \sum_{a'} \alpha  q_\pi(s',a'))  
 \end{flalign}
+(17) Expand out expected rewards \\
+(18) put it in terms of next expected reward plus discounted future rewards \\
+(19) Sum over the probabilities of state action transition and reward along with possible actions and their estimated future rewards.
+
 
 \end{document}
