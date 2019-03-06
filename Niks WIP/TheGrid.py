@@ -44,20 +44,37 @@ class SmallGrid:
 					playerY += 1
 				if probability == 4:
 					playerY += -1
-		
-		
+
+		return self.errorAndDoorCheck(playerX, playerY)
+
+	def errorAndDoorCheck(self, playerX, playerY):
+		#1 = North, 2 = East, 3 = South, 4 = West
+		door = 0
+		atDoor = False
+		#Did the agent walk through a door? HAs to be in the middle of the array and past the door
+		if 1 in self.doors and playerY < 0 and playerX + 1 == round(self.x/2):	
+			atDoor = True
+			door = 1
+		elif 2 in self.doors and playerY > self.y-1 and playerX + 1 == round(self.x/2):	
+			atDoor = True
+			door = 2
+		elif 3 in self.doors and playerX < 0 and playerY + 1 == round(self.y/2):	
+			atDoor = True
+			door = 3
+		elif 4 in self.doors and playerX > self.x-1 and playerY + 1 == round(self.y/2):	
+			atDoor = True
+			door = 4
+
+
 		#If they go off, reset the incorrect value.
 		if playerX < 0: playerX = 0
-		if playerX > self.x: playerX = self.x
+		if playerX > self.x-1: playerX = self.x-1
 		if playerY < 0: playerY = 0
-		if playerY > self.y: playerY = self.y
-		
-		return [playerX, playerY]
+		if playerY > self.y-1: playerY = self.y-1
 
-	def doorCheck(self, playerX, playerY):
-		
-		
-		
+		return [playerX, playerY, atDoor, door]
+
+
 	def printOut(self):
 		pStr = "\t"
 		for i in range(self.x): pStr = pStr + "____" 
