@@ -5,7 +5,7 @@ from TheGrid import SmallGrid
 debug = True
 
 class GridWorld:
-	def __init__(self, vertical=5, horizontal=5, p1=0.8, p2=0.1, numOfGrids=4):
+	def __init__(self, agent=None, vertical=5, horizontal=5, p1=0.8, p2=0.1, numOfGrids=4):
 		#Initialize should create the gridworld environment and accept an array of terminal states.
 		random.seed(datetime.now())
 		self.p1 = p1
@@ -13,6 +13,7 @@ class GridWorld:
 		self.reward = -1
 		self.currentGrid = 1
 		self.map = dict()
+		self.agent = agent
 		self.arrayOfGrids = []
 		for i in range(1,numOfGrids):
 			self.arrayOfGrids.append(SmallGrid(vertical,horizontal,[i, i+1], i))
@@ -25,14 +26,19 @@ class GridWorld:
 		4 has a north(Grid 3) and west door (grid 1)
 		'''
 
-	def agentMove(self, move, playerX, playerY, currentGrid):
-		#Results= [playerX, playerY, atDoor (True or false), Cardinal direction of door]
-		#1 = North, 2 = East, 3 = South, 4 = West
-		results = self.arrayOfGrids[currentGrid].makeYourMove(move, playerX, playerY, self.randomMovement())
-		
-		
+	def insertAgent(self,agent):
+		self.agent = agent
 
-		return [results[0], results[1], self.reward, currentGrid]
+	def agentMove(self):
+		#Results= { 'atDoor' : atDoor (True or false), 'door' : Cardinal direction of door}
+		#1 = North, 2 = East, 3 = South, 4 = West
+		results = self.arrayOfGrids[self.agent.currentGrid].makeYourMove(self.agent, 1)
+		if results['atDoor']:
+			print("At Door: Grid: {}, Direction: {}".format(self.agent.currentGrid,results['door']))
+			self.agent.currentGrid = self.map[self.agent.currentGrid][results['door']]
+			self.agent.reward += self.reward
+		else:
+			self.agent.reward += self.reward
 	
 	def randomMovement(self):
 		result = random.random()
@@ -78,4 +84,11 @@ class GridWorld:
 		mapBasic[4][4] = 1
 
 		self.map = mapBasic
-		print("Basic Map: {}, self.arrOfGrids: ".format(self.map, self.arrayOfGrids)) if debug else False #debug variable at top of file 
+		print("Basic Map: {}".format(self.map)) if debug else False #debug variable at top of file 
+	
+	def printOut(self):
+		for grid in self.arrayOfGrids:
+			print("Grid #: {}".format(grid.gridNumber)) if debug else False #debug
+			grid.printOut(self.agent)
+			# Possibly make grid print out return string, and use map to put ones connected to each other in correct order
+			# then use new line to make next line of grid lower and append string 

@@ -10,4 +10,7 @@ class Agent:
         self.policy = policy
 
     def move(self):
-        pass
+        return 1
+
+    def playerStatus(self):
+        return "agent Status: Reward: {},  X: {}, Y: {}, Gird: {}".format(self.reward, self.playerX,self.playerY,self.currentGrid)
