@@ -24,4 +24,4 @@ class testbed:
                 print("Iter: {}, Ep: {}, {}".format(iter, ep, self.gridWorld.agent.playerStatus())) if debug else False #debug
 
 test = testbed()
-test.run(1, 6)
+test.run(1, 100)

@@ -103,7 +103,9 @@ class GridWorld:
 	def printOut(self):
 		print("Grid World Printout: {}".format(self.arrayOfGrids))	
 		for grid in self.arrayOfGrids:
-			print("Grid #: {}, gridDoors: {}".format(grid.gridNumber,grid.doors)) if debug else False #debug
-			grid.printOut(self.agent, self.goal)
-			# Possibly make grid print out return string, and use map to put ones connected to each other in correct order
-			# then use new line to make next line of grid lower and append string 
+			#for now only print agent current grid
+			if True:# grid.gridNumber == self.agent.currentGrid:
+				print("Grid #: {}, gridDoors: {}".format(grid.gridNumber,grid.doors)) if debug else False #debug
+				grid.printOut(self.agent, self.goal)
+				# Possibly make grid print out return string, and use map to put ones connected to each other in correct order
+				# then use new line to make next line of grid lower and append string 

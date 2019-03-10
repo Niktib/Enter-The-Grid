@@ -84,22 +84,69 @@ class SmallGrid:
 
 
 	def printOut(self, agent, goal):
-		if agent.currentGrid == self.gridNumber:
-			pStr = "\t"
-			for i in range(self.x):
-				if 1 in self.doors and i == int(self.x/2):
-					pStr = pStr + "     " 
-				else:
-					pStr = pStr + "____" 
-					pass
-			pStr = pStr + "_\n"
-			for i in range(self.x):
+		pStr = "\t"
+		for i in range(self.x):
+			print("printOut i: {} , self.x/2: {}, self.x: {}".format(i,self.x/2,self.x)) if False else False
+			if 1 in self.doors and i == int(self.x/2):
+				pStr = pStr + "     " 
+			else:
+				pStr = pStr + "____" 
+				pass
+		pStr = pStr + "_\n"
+		for i in range(self.x):
+			if 4 in self.doors and i == int(self.x/2):
+				pStr = pStr + "\t"
+				for j in range(self.y):
+					pStr = pStr + "|   "
+				pStr = pStr + "\n\t"
+				for j in range(self.y):
+					if agent.playerX == j and agent.playerY == i and self.gridNumber == agent.currentGrid:
+						pStr = pStr + "| " + "A" + " "
+					elif goal['grid'] == self.gridNumber and goal['x'] == j and goal['y'] == i:
+						pStr = pStr + "| " + "G" + " "
+					else:
+						pStr = pStr + "| " + str(self.grid[i][j]) + " "
+				pStr = pStr + "\n\t"
+				for j in range(self.y):
+					pStr = pStr + "|___"
+				pStr = pStr + "\n"
+			elif 2 in self.doors and i == int(self.x/2):
+				pStr = pStr + "\t"
+				for j in range(self.y):
+					if j == 0:
+						pStr = pStr + "    "
+					else:
+						pStr = pStr + "|   "
+				pStr = pStr + "|\n\t"
+				for j in range(self.y):
+					if j == 0:
+						if agent.playerX == j and agent.playerY == i and self.gridNumber == agent.currentGrid:
+							pStr = pStr + "  " + "A" + " "
+						elif goal['grid'] == self.gridNumber and goal['x'] == j and goal['y'] == i:
+							pStr = pStr + "  " + "G" + " "
+						else:
+							pStr = pStr + "  "+ str(self.grid[i][j]) + " "
+					else:
+						if agent.playerX == j and agent.playerY == i and self.gridNumber == agent.currentGrid:
+							pStr = pStr + "| " + "A" + " "
+						elif goal['grid'] == self.gridNumber and goal['x'] == j and goal['y'] == i:
+							pStr = pStr + "| " + "G" + " "
+						else:
+							pStr = pStr + "| " + str(self.grid[i][j]) + " "
+				pStr = pStr + "|\n\t"
+				for j in range(self.y):
+					if j == 0:
+						pStr = pStr + " ___"
+					else:
+						pStr = pStr + "|___"
+				pStr = pStr + "|\n"
+			else:
 				pStr = pStr + "\t"
 				for j in range(self.y):
 					pStr = pStr + "|   "
 				pStr = pStr + "|\n\t"
 				for j in range(self.y):
-					if agent.playerX == j and agent.playerY == i:
+					if agent.playerX == j and agent.playerY == i and self.gridNumber == agent.currentGrid:
 						pStr = pStr + "| " + "A" + " "
 					elif goal['grid'] == self.gridNumber and goal['x'] == j and goal['y'] == i:
 						pStr = pStr + "| " + "G" + " "
@@ -113,48 +160,4 @@ class SmallGrid:
 					else:
 						pStr = pStr + "|___"
 				pStr = pStr + "|\n"
-			print(pStr)
-
-		#if player not on grid 
-		else:	
-			pStr = "\t"
-			for i in range(self.x):
-				print("printOut i: {} , self.x/2: {}, self.x: {}".format(i,self.x/2,self.x)) if False else False
-				if 1 in self.doors and i == int(self.x/2):
-					pStr = pStr + "     " 
-				else:
-					pStr = pStr + "____" 
-					pass
-			pStr = pStr + "_\n"
-			for i in range(self.x):
-				if 4 in self.doors and i == self.x-1:
-					pStr = pStr + "\t"
-					for j in range(self.y):
-						if j == int(self.y/2):
-							pStr = pStr + "|   "
-						else:
-							pStr = pStr + "|   "
-					pStr = pStr + "|\n\t"
-					for j in range(self.y):
-						pStr = pStr + "| " + str(self.grid[i][j]) + " "
-					pStr = pStr + "|\n\t"
-					for j in range(self.y):
-						pStr = pStr + "|___"
-					pStr = pStr + "|\n"
-
-				else:
-					pStr = pStr + "\t"
-					for j in range(self.y):
-						pStr = pStr + "|   "
-					pStr = pStr + "|\n\t"
-					for j in range(self.y):
-						pStr = pStr + "| " + str(self.grid[i][j]) + " "
-					pStr = pStr + "|\n\t"
-					# to open but door at the bottom
-					for j in range(self.y):
-						if i == int(self.y-1) and 3 in self.doors and j == int(self.x/2):
-							pStr = pStr + "|   "
-						else:
-							pStr = pStr + "|___"
-					pStr = pStr + "|\n"
-			print(pStr)
+		print(pStr)
