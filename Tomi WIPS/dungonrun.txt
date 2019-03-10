@@ -1,5 +1,5 @@
 Basic Map: {1: {1: 2, 2: 4}, 2: {2: 3, 3: 1}, 3: {3: 4, 4: 2}, 4: {4: 1, 1: 3}}
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -8,94 +8,94 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | A | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 3, agent Status: Reward: 0,  X: 2, Y: 2, Gird: 3
+post agent Move: 3, agent Status: Reward: 0,  X: 2, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: 0,  X: 2, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 1, agent Status: Reward: -1,  X: 2, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | A | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 1, agent Status: Reward: 0,  X: 2, Y: 2, Gird: 3
-post agent Move: 1, agent Status: Reward: 0,  X: 2, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: 0,  X: 2, Y: 1, Gird: 3, round(self.x): 5
+pre agent Move: 1, agent Status: Reward: -1,  X: 2, Y: 3, Gird: 3
+post agent Move: 1, agent Status: Reward: -1,  X: 2, Y: 2, Gird: 3
+Door and Error Check, agent Status: Reward: -1,  X: 2, Y: 2, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 1, agent Status: Reward: -1,  X: 2, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 2, agent Status: Reward: -2,  X: 2, Y: 2, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | A | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 3, agent Status: Reward: -2,  X: 2, Y: 2, Gird: 3
+post agent Move: 3, agent Status: Reward: -2,  X: 2, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -2,  X: 2, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 3, agent Status: Reward: -3,  X: 2, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | A | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 4, agent Status: Reward: -1,  X: 2, Y: 1, Gird: 3
-post agent Move: 4, agent Status: Reward: -1,  X: 1, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -1,  X: 1, Y: 1, Gird: 3, round(self.x): 5
+pre agent Move: 3, agent Status: Reward: -3,  X: 2, Y: 3, Gird: 3
+post agent Move: 3, agent Status: Reward: -3,  X: 2, Y: 4, Gird: 3
+Door and Error Check, agent Status: Reward: -3,  X: 2, Y: 4, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 2, agent Status: Reward: -2,  X: 1, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 4, agent Status: Reward: -2,  X: 1, Y: 1, Gird: 3
-post agent Move: 4, agent Status: Reward: -2,  X: 0, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -2,  X: 0, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 3, agent Status: Reward: -3,  X: 0, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| A | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -3,  X: 0, Y: 1, Gird: 3
-post agent Move: 3, agent Status: Reward: -3,  X: 0, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -3,  X: 0, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 4, agent Status: Reward: -4,  X: 0, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 4, agent Status: Reward: -4,  X: 2, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -104,22 +104,22 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| A | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | A | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 3, agent Status: Reward: -4,  X: 0, Y: 2, Gird: 3
-post agent Move: 3, agent Status: Reward: -4,  X: 0, Y: 3, Gird: 3
-Door and Error Check, agent Status: Reward: -4,  X: 0, Y: 3, Gird: 3, round(self.x): 5
+pre agent Move: 2, agent Status: Reward: -4,  X: 2, Y: 4, Gird: 3
+post agent Move: 2, agent Status: Reward: -4,  X: 3, Y: 4, Gird: 3
+Door and Error Check, agent Status: Reward: -4,  X: 3, Y: 4, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 5, agent Status: Reward: -5,  X: 0, Y: 3, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 5, agent Status: Reward: -5,  X: 3, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -128,22 +128,22 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
-	| A | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
+	| 0 | 0 | 0 | A | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 3, agent Status: Reward: -5,  X: 0, Y: 3, Gird: 3
-post agent Move: 3, agent Status: Reward: -5,  X: 0, Y: 4, Gird: 3
-Door and Error Check, agent Status: Reward: -5,  X: 0, Y: 4, Gird: 3, round(self.x): 5
+pre agent Move: 3, agent Status: Reward: -5,  X: 3, Y: 4, Gird: 3
+post agent Move: 3, agent Status: Reward: -5,  X: 3, Y: 5, Gird: 3
+Door and Error Check, agent Status: Reward: -5,  X: 3, Y: 5, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 6, agent Status: Reward: -6,  X: 0, Y: 4, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 6, agent Status: Reward: -6,  X: 3, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -152,22 +152,22 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| A | 0 | 0 | 0 | 0 |
+	| 0 | 0 | 0 | A | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 3, agent Status: Reward: -6,  X: 0, Y: 4, Gird: 3
-post agent Move: 3, agent Status: Reward: -6,  X: 0, Y: 5, Gird: 3
-Door and Error Check, agent Status: Reward: -6,  X: 0, Y: 5, Gird: 3, round(self.x): 5
+pre agent Move: 4, agent Status: Reward: -6,  X: 3, Y: 4, Gird: 3
+post agent Move: 4, agent Status: Reward: -6,  X: 2, Y: 4, Gird: 3
+Door and Error Check, agent Status: Reward: -6,  X: 2, Y: 4, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 7, agent Status: Reward: -7,  X: 0, Y: 4, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 7, agent Status: Reward: -7,  X: 2, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -176,22 +176,22 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| A | 0 | 0 | 0 | 0 |
+	| 0 | 0 | A | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 2, agent Status: Reward: -7,  X: 0, Y: 4, Gird: 3
-post agent Move: 2, agent Status: Reward: -7,  X: 1, Y: 4, Gird: 3
+pre agent Move: 4, agent Status: Reward: -7,  X: 2, Y: 4, Gird: 3
+post agent Move: 4, agent Status: Reward: -7,  X: 1, Y: 4, Gird: 3
 Door and Error Check, agent Status: Reward: -7,  X: 1, Y: 4, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
 Iter: 1, Ep: 8, agent Status: Reward: -8,  X: 1, Y: 4, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -200,9 +200,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -210,12 +210,12 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | A | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 1, agent Status: Reward: -8,  X: 1, Y: 4, Gird: 3
-post agent Move: 1, agent Status: Reward: -8,  X: 1, Y: 3, Gird: 3
-Door and Error Check, agent Status: Reward: -8,  X: 1, Y: 3, Gird: 3, round(self.x): 5
+pre agent Move: 4, agent Status: Reward: -8,  X: 1, Y: 4, Gird: 3
+post agent Move: 4, agent Status: Reward: -8,  X: 0, Y: 4, Gird: 3
+Door and Error Check, agent Status: Reward: -8,  X: 0, Y: 4, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 9, agent Status: Reward: -9,  X: 1, Y: 3, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 9, agent Status: Reward: -9,  X: 0, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -224,22 +224,22 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
+	| A | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 3, agent Status: Reward: -9,  X: 1, Y: 3, Gird: 3
-post agent Move: 3, agent Status: Reward: -9,  X: 1, Y: 4, Gird: 3
+pre agent Move: 2, agent Status: Reward: -9,  X: 0, Y: 4, Gird: 3
+post agent Move: 2, agent Status: Reward: -9,  X: 1, Y: 4, Gird: 3
 Door and Error Check, agent Status: Reward: -9,  X: 1, Y: 4, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
 Iter: 1, Ep: 10, agent Status: Reward: -10,  X: 1, Y: 4, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -248,9 +248,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -258,12 +258,12 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | A | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 1, agent Status: Reward: -10,  X: 1, Y: 4, Gird: 3
-post agent Move: 1, agent Status: Reward: -10,  X: 1, Y: 3, Gird: 3
-Door and Error Check, agent Status: Reward: -10,  X: 1, Y: 3, Gird: 3, round(self.x): 5
+pre agent Move: 3, agent Status: Reward: -10,  X: 1, Y: 4, Gird: 3
+post agent Move: 3, agent Status: Reward: -10,  X: 1, Y: 5, Gird: 3
+Door and Error Check, agent Status: Reward: -10,  X: 1, Y: 5, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 11, agent Status: Reward: -11,  X: 1, Y: 3, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 11, agent Status: Reward: -11,  X: 1, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -272,22 +272,22 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 4, agent Status: Reward: -11,  X: 1, Y: 3, Gird: 3
-post agent Move: 4, agent Status: Reward: -11,  X: 0, Y: 3, Gird: 3
-Door and Error Check, agent Status: Reward: -11,  X: 0, Y: 3, Gird: 3, round(self.x): 5
+pre agent Move: 3, agent Status: Reward: -11,  X: 1, Y: 4, Gird: 3
+post agent Move: 3, agent Status: Reward: -11,  X: 1, Y: 5, Gird: 3
+Door and Error Check, agent Status: Reward: -11,  X: 1, Y: 5, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 12, agent Status: Reward: -12,  X: 0, Y: 3, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 12, agent Status: Reward: -12,  X: 1, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -296,9 +296,81 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | A | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 4, agent Status: Reward: -12,  X: 1, Y: 4, Gird: 3
+post agent Move: 4, agent Status: Reward: -12,  X: 0, Y: 4, Gird: 3
+Door and Error Check, agent Status: Reward: -12,  X: 0, Y: 4, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 13, agent Status: Reward: -13,  X: 0, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| A | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 4, agent Status: Reward: -13,  X: 0, Y: 4, Gird: 3
+post agent Move: 4, agent Status: Reward: -13,  X: -1, Y: 4, Gird: 3
+Door and Error Check, agent Status: Reward: -13,  X: -1, Y: 4, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 14, agent Status: Reward: -14,  X: 0, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| A | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 1, agent Status: Reward: -14,  X: 0, Y: 4, Gird: 3
+post agent Move: 1, agent Status: Reward: -14,  X: 0, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -14,  X: 0, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 15, agent Status: Reward: -15,  X: 0, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| A | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -306,12 +378,12 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 4, agent Status: Reward: -12,  X: 0, Y: 3, Gird: 3
-post agent Move: 4, agent Status: Reward: -12,  X: -1, Y: 3, Gird: 3
-Door and Error Check, agent Status: Reward: -12,  X: -1, Y: 3, Gird: 3, round(self.x): 5
+pre agent Move: 4, agent Status: Reward: -15,  X: 0, Y: 3, Gird: 3
+post agent Move: 4, agent Status: Reward: -15,  X: -1, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -15,  X: -1, Y: 3, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 13, agent Status: Reward: -13,  X: 0, Y: 3, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 16, agent Status: Reward: -16,  X: 0, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -320,9 +392,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| A | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -330,12 +402,12 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 4, agent Status: Reward: -13,  X: 0, Y: 3, Gird: 3
-post agent Move: 4, agent Status: Reward: -13,  X: -1, Y: 3, Gird: 3
-Door and Error Check, agent Status: Reward: -13,  X: -1, Y: 3, Gird: 3, round(self.x): 5
+pre agent Move: 3, agent Status: Reward: -16,  X: 0, Y: 3, Gird: 3
+post agent Move: 3, agent Status: Reward: -16,  X: 0, Y: 4, Gird: 3
+Door and Error Check, agent Status: Reward: -16,  X: 0, Y: 4, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 14, agent Status: Reward: -14,  X: 0, Y: 3, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 17, agent Status: Reward: -17,  X: 0, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -344,9 +416,57 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| A | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 4, agent Status: Reward: -17,  X: 0, Y: 4, Gird: 3
+post agent Move: 4, agent Status: Reward: -17,  X: -1, Y: 4, Gird: 3
+Door and Error Check, agent Status: Reward: -17,  X: -1, Y: 4, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 18, agent Status: Reward: -18,  X: 0, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| A | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 1, agent Status: Reward: -18,  X: 0, Y: 4, Gird: 3
+post agent Move: 1, agent Status: Reward: -18,  X: 0, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -18,  X: 0, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 19, agent Status: Reward: -19,  X: 0, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| A | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -354,12 +474,12 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 2, agent Status: Reward: -14,  X: 0, Y: 3, Gird: 3
-post agent Move: 2, agent Status: Reward: -14,  X: 1, Y: 3, Gird: 3
-Door and Error Check, agent Status: Reward: -14,  X: 1, Y: 3, Gird: 3, round(self.x): 5
+pre agent Move: 1, agent Status: Reward: -19,  X: 0, Y: 3, Gird: 3
+post agent Move: 1, agent Status: Reward: -19,  X: 0, Y: 2, Gird: 3
+Door and Error Check, agent Status: Reward: -19,  X: 0, Y: 2, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 15, agent Status: Reward: -15,  X: 1, Y: 3, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 20, agent Status: Reward: -20,  X: 0, Y: 2, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -368,33 +488,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -15,  X: 1, Y: 3, Gird: 3
-post agent Move: 1, agent Status: Reward: -15,  X: 1, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -15,  X: 1, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 16, agent Status: Reward: -16,  X: 1, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| A | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -402,36 +498,12 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 1, agent Status: Reward: -16,  X: 1, Y: 2, Gird: 3
-post agent Move: 1, agent Status: Reward: -16,  X: 1, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -16,  X: 1, Y: 1, Gird: 3, round(self.x): 5
+pre agent Move: 1, agent Status: Reward: -20,  X: 0, Y: 2, Gird: 3
+post agent Move: 1, agent Status: Reward: -20,  X: 0, Y: 1, Gird: 3
+Door and Error Check, agent Status: Reward: -20,  X: 0, Y: 1, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 17, agent Status: Reward: -17,  X: 1, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 4, agent Status: Reward: -17,  X: 1, Y: 1, Gird: 3
-post agent Move: 4, agent Status: Reward: -17,  X: 0, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -17,  X: 0, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 18, agent Status: Reward: -18,  X: 0, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 21, agent Status: Reward: -21,  X: 0, Y: 1, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -440,9 +512,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| A | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -450,12 +522,12 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 2, agent Status: Reward: -18,  X: 0, Y: 1, Gird: 3
-post agent Move: 2, agent Status: Reward: -18,  X: 1, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -18,  X: 1, Y: 1, Gird: 3, round(self.x): 5
+pre agent Move: 2, agent Status: Reward: -21,  X: 0, Y: 1, Gird: 3
+post agent Move: 2, agent Status: Reward: -21,  X: 1, Y: 1, Gird: 3
+Door and Error Check, agent Status: Reward: -21,  X: 1, Y: 1, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 19, agent Status: Reward: -19,  X: 1, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 22, agent Status: Reward: -22,  X: 1, Y: 1, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -464,9 +536,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | A | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -474,12 +546,60 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 2, agent Status: Reward: -19,  X: 1, Y: 1, Gird: 3
-post agent Move: 2, agent Status: Reward: -19,  X: 2, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -19,  X: 2, Y: 1, Gird: 3, round(self.x): 5
+pre agent Move: 3, agent Status: Reward: -22,  X: 1, Y: 1, Gird: 3
+post agent Move: 3, agent Status: Reward: -22,  X: 1, Y: 2, Gird: 3
+Door and Error Check, agent Status: Reward: -22,  X: 1, Y: 2, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 20, agent Status: Reward: -20,  X: 2, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 23, agent Status: Reward: -23,  X: 1, Y: 2, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | A | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 1, agent Status: Reward: -23,  X: 1, Y: 2, Gird: 3
+post agent Move: 1, agent Status: Reward: -23,  X: 1, Y: 1, Gird: 3
+Door and Error Check, agent Status: Reward: -23,  X: 1, Y: 1, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 24, agent Status: Reward: -24,  X: 1, Y: 1, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | A | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 2, agent Status: Reward: -24,  X: 1, Y: 1, Gird: 3
+post agent Move: 2, agent Status: Reward: -24,  X: 2, Y: 1, Gird: 3
+Door and Error Check, agent Status: Reward: -24,  X: 2, Y: 1, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 25, agent Status: Reward: -25,  X: 2, Y: 1, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -488,9 +608,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | A | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -498,180 +618,228 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 4, agent Status: Reward: -20,  X: 2, Y: 1, Gird: 3
-post agent Move: 4, agent Status: Reward: -20,  X: 1, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -20,  X: 1, Y: 1, Gird: 3, round(self.x): 5
+pre agent Move: 3, agent Status: Reward: -25,  X: 2, Y: 1, Gird: 3
+post agent Move: 3, agent Status: Reward: -25,  X: 2, Y: 2, Gird: 3
+Door and Error Check, agent Status: Reward: -25,  X: 2, Y: 2, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 21, agent Status: Reward: -21,  X: 1, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 26, agent Status: Reward: -26,  X: 2, Y: 2, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | A | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 1, agent Status: Reward: -26,  X: 2, Y: 2, Gird: 3
+post agent Move: 1, agent Status: Reward: -26,  X: 2, Y: 1, Gird: 3
+Door and Error Check, agent Status: Reward: -26,  X: 2, Y: 1, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 27, agent Status: Reward: -27,  X: 2, Y: 1, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | A | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 3, agent Status: Reward: -27,  X: 2, Y: 1, Gird: 3
+post agent Move: 3, agent Status: Reward: -27,  X: 2, Y: 2, Gird: 3
+Door and Error Check, agent Status: Reward: -27,  X: 2, Y: 2, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 28, agent Status: Reward: -28,  X: 2, Y: 2, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | A | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 3, agent Status: Reward: -28,  X: 2, Y: 2, Gird: 3
+post agent Move: 3, agent Status: Reward: -28,  X: 2, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -28,  X: 2, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 29, agent Status: Reward: -29,  X: 2, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | A | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 4, agent Status: Reward: -29,  X: 2, Y: 3, Gird: 3
+post agent Move: 4, agent Status: Reward: -29,  X: 1, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -29,  X: 1, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 30, agent Status: Reward: -30,  X: 1, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | A | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 3, agent Status: Reward: -30,  X: 1, Y: 3, Gird: 3
+post agent Move: 3, agent Status: Reward: -30,  X: 1, Y: 4, Gird: 3
+Door and Error Check, agent Status: Reward: -30,  X: 1, Y: 4, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 31, agent Status: Reward: -31,  X: 1, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | A | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 1, agent Status: Reward: -31,  X: 1, Y: 4, Gird: 3
+post agent Move: 1, agent Status: Reward: -31,  X: 1, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -31,  X: 1, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 32, agent Status: Reward: -32,  X: 1, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | A | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 4, agent Status: Reward: -21,  X: 1, Y: 1, Gird: 3
-post agent Move: 4, agent Status: Reward: -21,  X: 0, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -21,  X: 0, Y: 1, Gird: 3, round(self.x): 5
+pre agent Move: 3, agent Status: Reward: -32,  X: 1, Y: 3, Gird: 3
+post agent Move: 3, agent Status: Reward: -32,  X: 1, Y: 4, Gird: 3
+Door and Error Check, agent Status: Reward: -32,  X: 1, Y: 4, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 22, agent Status: Reward: -22,  X: 0, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 33, agent Status: Reward: -33,  X: 1, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | A | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 4, agent Status: Reward: -33,  X: 1, Y: 4, Gird: 3
+post agent Move: 4, agent Status: Reward: -33,  X: 0, Y: 4, Gird: 3
+Door and Error Check, agent Status: Reward: -33,  X: 0, Y: 4, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 34, agent Status: Reward: -34,  X: 0, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| A | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 2, agent Status: Reward: -22,  X: 0, Y: 1, Gird: 3
-post agent Move: 2, agent Status: Reward: -22,  X: 1, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -22,  X: 1, Y: 1, Gird: 3, round(self.x): 5
+pre agent Move: 1, agent Status: Reward: -34,  X: 0, Y: 4, Gird: 3
+post agent Move: 1, agent Status: Reward: -34,  X: 0, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -34,  X: 0, Y: 3, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 23, agent Status: Reward: -23,  X: 1, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -23,  X: 1, Y: 1, Gird: 3
-post agent Move: 1, agent Status: Reward: -23,  X: 1, Y: 0, Gird: 3
-Door and Error Check, agent Status: Reward: -23,  X: 1, Y: 0, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 24, agent Status: Reward: -24,  X: 1, Y: 0, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 2, agent Status: Reward: -24,  X: 1, Y: 0, Gird: 3
-post agent Move: 2, agent Status: Reward: -24,  X: 2, Y: 0, Gird: 3
-Door and Error Check, agent Status: Reward: -24,  X: 2, Y: 0, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 25, agent Status: Reward: -25,  X: 2, Y: 0, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -25,  X: 2, Y: 0, Gird: 3
-post agent Move: 3, agent Status: Reward: -25,  X: 2, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -25,  X: 2, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 26, agent Status: Reward: -26,  X: 2, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 4, agent Status: Reward: -26,  X: 2, Y: 1, Gird: 3
-post agent Move: 4, agent Status: Reward: -26,  X: 1, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -26,  X: 1, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 27, agent Status: Reward: -27,  X: 1, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -27,  X: 1, Y: 1, Gird: 3
-post agent Move: 3, agent Status: Reward: -27,  X: 1, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -27,  X: 1, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 28, agent Status: Reward: -28,  X: 1, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 35, agent Status: Reward: -35,  X: 0, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -680,46 +848,22 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 4, agent Status: Reward: -28,  X: 1, Y: 2, Gird: 3
-post agent Move: 4, agent Status: Reward: -28,  X: 0, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -28,  X: 0, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 29, agent Status: Reward: -29,  X: 0, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| A | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 2, agent Status: Reward: -29,  X: 0, Y: 2, Gird: 3
-post agent Move: 2, agent Status: Reward: -29,  X: 1, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -29,  X: 1, Y: 2, Gird: 3, round(self.x): 5
+pre agent Move: 4, agent Status: Reward: -35,  X: 0, Y: 3, Gird: 3
+post agent Move: 4, agent Status: Reward: -35,  X: -1, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -35,  X: -1, Y: 3, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 30, agent Status: Reward: -30,  X: 1, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 36, agent Status: Reward: -36,  X: 0, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -728,46 +872,22 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -30,  X: 1, Y: 2, Gird: 3
-post agent Move: 1, agent Status: Reward: -30,  X: 1, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -30,  X: 1, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 31, agent Status: Reward: -31,  X: 1, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
+	| A | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 3, agent Status: Reward: -31,  X: 1, Y: 1, Gird: 3
-post agent Move: 3, agent Status: Reward: -31,  X: 1, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -31,  X: 1, Y: 2, Gird: 3, round(self.x): 5
+pre agent Move: 4, agent Status: Reward: -36,  X: 0, Y: 3, Gird: 3
+post agent Move: 4, agent Status: Reward: -36,  X: -1, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -36,  X: -1, Y: 3, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 32, agent Status: Reward: -32,  X: 1, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 37, agent Status: Reward: -37,  X: 0, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -776,22 +896,22 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
+	| A | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 2, agent Status: Reward: -32,  X: 1, Y: 2, Gird: 3
-post agent Move: 2, agent Status: Reward: -32,  X: 2, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -32,  X: 2, Y: 2, Gird: 3, round(self.x): 5
+pre agent Move: 4, agent Status: Reward: -37,  X: 0, Y: 3, Gird: 3
+post agent Move: 4, agent Status: Reward: -37,  X: -1, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -37,  X: -1, Y: 3, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 33, agent Status: Reward: -33,  X: 2, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 38, agent Status: Reward: -38,  X: 0, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -800,142 +920,22 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 4, agent Status: Reward: -33,  X: 2, Y: 2, Gird: 3
-post agent Move: 4, agent Status: Reward: -33,  X: 1, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -33,  X: 1, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 34, agent Status: Reward: -34,  X: 1, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
+	| A | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 3, agent Status: Reward: -34,  X: 1, Y: 2, Gird: 3
-post agent Move: 3, agent Status: Reward: -34,  X: 1, Y: 3, Gird: 3
-Door and Error Check, agent Status: Reward: -34,  X: 1, Y: 3, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 35, agent Status: Reward: -35,  X: 1, Y: 3, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -35,  X: 1, Y: 3, Gird: 3
-post agent Move: 1, agent Status: Reward: -35,  X: 1, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -35,  X: 1, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 36, agent Status: Reward: -36,  X: 1, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -36,  X: 1, Y: 2, Gird: 3
-post agent Move: 3, agent Status: Reward: -36,  X: 1, Y: 3, Gird: 3
-Door and Error Check, agent Status: Reward: -36,  X: 1, Y: 3, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 37, agent Status: Reward: -37,  X: 1, Y: 3, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -37,  X: 1, Y: 3, Gird: 3
-post agent Move: 3, agent Status: Reward: -37,  X: 1, Y: 4, Gird: 3
-Door and Error Check, agent Status: Reward: -37,  X: 1, Y: 4, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 38, agent Status: Reward: -38,  X: 1, Y: 4, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -38,  X: 1, Y: 4, Gird: 3
-post agent Move: 1, agent Status: Reward: -38,  X: 1, Y: 3, Gird: 3
+pre agent Move: 2, agent Status: Reward: -38,  X: 0, Y: 3, Gird: 3
+post agent Move: 2, agent Status: Reward: -38,  X: 1, Y: 3, Gird: 3
 Door and Error Check, agent Status: Reward: -38,  X: 1, Y: 3, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
 Iter: 1, Ep: 39, agent Status: Reward: -39,  X: 1, Y: 3, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -944,9 +944,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | A | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -954,12 +954,12 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 2, agent Status: Reward: -39,  X: 1, Y: 3, Gird: 3
-post agent Move: 2, agent Status: Reward: -39,  X: 2, Y: 3, Gird: 3
-Door and Error Check, agent Status: Reward: -39,  X: 2, Y: 3, Gird: 3, round(self.x): 5
+pre agent Move: 4, agent Status: Reward: -39,  X: 1, Y: 3, Gird: 3
+post agent Move: 4, agent Status: Reward: -39,  X: 0, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -39,  X: 0, Y: 3, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 40, agent Status: Reward: -40,  X: 2, Y: 3, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 40, agent Status: Reward: -40,  X: 0, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -968,22 +968,22 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
+	| A | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 4, agent Status: Reward: -40,  X: 2, Y: 3, Gird: 3
-post agent Move: 4, agent Status: Reward: -40,  X: 1, Y: 3, Gird: 3
+pre agent Move: 2, agent Status: Reward: -40,  X: 0, Y: 3, Gird: 3
+post agent Move: 2, agent Status: Reward: -40,  X: 1, Y: 3, Gird: 3
 Door and Error Check, agent Status: Reward: -40,  X: 1, Y: 3, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
 Iter: 1, Ep: 41, agent Status: Reward: -41,  X: 1, Y: 3, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -992,9 +992,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | A | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -1007,7 +1007,7 @@ post agent Move: 1, agent Status: Reward: -41,  X: 1, Y: 2, Gird: 3
 Door and Error Check, agent Status: Reward: -41,  X: 1, Y: 2, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
 Iter: 1, Ep: 42, agent Status: Reward: -42,  X: 1, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -1016,9 +1016,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | A | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -1031,7 +1031,7 @@ post agent Move: 2, agent Status: Reward: -42,  X: 2, Y: 2, Gird: 3
 Door and Error Check, agent Status: Reward: -42,  X: 2, Y: 2, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
 Iter: 1, Ep: 43, agent Status: Reward: -43,  X: 2, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -1040,9 +1040,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | A | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -1050,12 +1050,12 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 2, agent Status: Reward: -43,  X: 2, Y: 2, Gird: 3
-post agent Move: 2, agent Status: Reward: -43,  X: 3, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -43,  X: 3, Y: 2, Gird: 3, round(self.x): 5
+pre agent Move: 4, agent Status: Reward: -43,  X: 2, Y: 2, Gird: 3
+post agent Move: 4, agent Status: Reward: -43,  X: 1, Y: 2, Gird: 3
+Door and Error Check, agent Status: Reward: -43,  X: 1, Y: 2, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 44, agent Status: Reward: -44,  X: 3, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 44, agent Status: Reward: -44,  X: 1, Y: 2, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -1064,9 +1064,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | A | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -1074,108 +1074,12 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 1, agent Status: Reward: -44,  X: 3, Y: 2, Gird: 3
-post agent Move: 1, agent Status: Reward: -44,  X: 3, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -44,  X: 3, Y: 1, Gird: 3, round(self.x): 5
+pre agent Move: 3, agent Status: Reward: -44,  X: 1, Y: 2, Gird: 3
+post agent Move: 3, agent Status: Reward: -44,  X: 1, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -44,  X: 1, Y: 3, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 45, agent Status: Reward: -45,  X: 3, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -45,  X: 3, Y: 1, Gird: 3
-post agent Move: 1, agent Status: Reward: -45,  X: 3, Y: 0, Gird: 3
-Door and Error Check, agent Status: Reward: -45,  X: 3, Y: 0, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 46, agent Status: Reward: -46,  X: 3, Y: 0, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -46,  X: 3, Y: 0, Gird: 3
-post agent Move: 1, agent Status: Reward: -46,  X: 3, Y: -1, Gird: 3
-Door and Error Check, agent Status: Reward: -46,  X: 3, Y: -1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 47, agent Status: Reward: -47,  X: 3, Y: 0, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -47,  X: 3, Y: 0, Gird: 3
-post agent Move: 3, agent Status: Reward: -47,  X: 3, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -47,  X: 3, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 48, agent Status: Reward: -48,  X: 3, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -48,  X: 3, Y: 1, Gird: 3
-post agent Move: 3, agent Status: Reward: -48,  X: 3, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -48,  X: 3, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 49, agent Status: Reward: -49,  X: 3, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 45, agent Status: Reward: -45,  X: 1, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -1184,430 +1088,22 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 4, agent Status: Reward: -49,  X: 3, Y: 2, Gird: 3
-post agent Move: 4, agent Status: Reward: -49,  X: 2, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -49,  X: 2, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 50, agent Status: Reward: -50,  X: 2, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -50,  X: 2, Y: 2, Gird: 3
-post agent Move: 1, agent Status: Reward: -50,  X: 2, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -50,  X: 2, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 51, agent Status: Reward: -51,  X: 2, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 2, agent Status: Reward: -51,  X: 2, Y: 1, Gird: 3
-post agent Move: 2, agent Status: Reward: -51,  X: 3, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -51,  X: 3, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 52, agent Status: Reward: -52,  X: 3, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -52,  X: 3, Y: 1, Gird: 3
-post agent Move: 1, agent Status: Reward: -52,  X: 3, Y: 0, Gird: 3
-Door and Error Check, agent Status: Reward: -52,  X: 3, Y: 0, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 53, agent Status: Reward: -53,  X: 3, Y: 0, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 2, agent Status: Reward: -53,  X: 3, Y: 0, Gird: 3
-post agent Move: 2, agent Status: Reward: -53,  X: 4, Y: 0, Gird: 3
-Door and Error Check, agent Status: Reward: -53,  X: 4, Y: 0, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 54, agent Status: Reward: -54,  X: 4, Y: 0, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | A |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -54,  X: 4, Y: 0, Gird: 3
-post agent Move: 3, agent Status: Reward: -54,  X: 4, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -54,  X: 4, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 55, agent Status: Reward: -55,  X: 4, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | A |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -55,  X: 4, Y: 1, Gird: 3
-post agent Move: 1, agent Status: Reward: -55,  X: 4, Y: 0, Gird: 3
-Door and Error Check, agent Status: Reward: -55,  X: 4, Y: 0, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 56, agent Status: Reward: -56,  X: 4, Y: 0, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | A |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -56,  X: 4, Y: 0, Gird: 3
-post agent Move: 1, agent Status: Reward: -56,  X: 4, Y: -1, Gird: 3
-Door and Error Check, agent Status: Reward: -56,  X: 4, Y: -1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 57, agent Status: Reward: -57,  X: 4, Y: 0, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | A |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 4, agent Status: Reward: -57,  X: 4, Y: 0, Gird: 3
-post agent Move: 4, agent Status: Reward: -57,  X: 3, Y: 0, Gird: 3
-Door and Error Check, agent Status: Reward: -57,  X: 3, Y: 0, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 58, agent Status: Reward: -58,  X: 3, Y: 0, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -58,  X: 3, Y: 0, Gird: 3
-post agent Move: 1, agent Status: Reward: -58,  X: 3, Y: -1, Gird: 3
-Door and Error Check, agent Status: Reward: -58,  X: 3, Y: -1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 59, agent Status: Reward: -59,  X: 3, Y: 0, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -59,  X: 3, Y: 0, Gird: 3
-post agent Move: 1, agent Status: Reward: -59,  X: 3, Y: -1, Gird: 3
-Door and Error Check, agent Status: Reward: -59,  X: 3, Y: -1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 60, agent Status: Reward: -60,  X: 3, Y: 0, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -60,  X: 3, Y: 0, Gird: 3
-post agent Move: 3, agent Status: Reward: -60,  X: 3, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -60,  X: 3, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 61, agent Status: Reward: -61,  X: 3, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 4, agent Status: Reward: -61,  X: 3, Y: 1, Gird: 3
-post agent Move: 4, agent Status: Reward: -61,  X: 2, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -61,  X: 2, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 62, agent Status: Reward: -62,  X: 2, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 2, agent Status: Reward: -62,  X: 2, Y: 1, Gird: 3
-post agent Move: 2, agent Status: Reward: -62,  X: 3, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -62,  X: 3, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 63, agent Status: Reward: -63,  X: 3, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 4, agent Status: Reward: -63,  X: 3, Y: 1, Gird: 3
-post agent Move: 4, agent Status: Reward: -63,  X: 2, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -63,  X: 2, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 64, agent Status: Reward: -64,  X: 2, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -64,  X: 2, Y: 1, Gird: 3
-post agent Move: 3, agent Status: Reward: -64,  X: 2, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -64,  X: 2, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 65, agent Status: Reward: -65,  X: 2, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 4, agent Status: Reward: -65,  X: 2, Y: 2, Gird: 3
-post agent Move: 4, agent Status: Reward: -65,  X: 1, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -65,  X: 1, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 66, agent Status: Reward: -66,  X: 1, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | A | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 2, agent Status: Reward: -66,  X: 1, Y: 2, Gird: 3
-post agent Move: 2, agent Status: Reward: -66,  X: 2, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -66,  X: 2, Y: 2, Gird: 3, round(self.x): 5
+pre agent Move: 4, agent Status: Reward: -45,  X: 1, Y: 3, Gird: 3
+post agent Move: 4, agent Status: Reward: -45,  X: 0, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -45,  X: 0, Y: 3, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 67, agent Status: Reward: -67,  X: 2, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 46, agent Status: Reward: -46,  X: 0, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -1616,22 +1112,22 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
+	| A | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 4, agent Status: Reward: -67,  X: 2, Y: 2, Gird: 3
-post agent Move: 4, agent Status: Reward: -67,  X: 1, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -67,  X: 1, Y: 2, Gird: 3, round(self.x): 5
+pre agent Move: 4, agent Status: Reward: -46,  X: 0, Y: 3, Gird: 3
+post agent Move: 4, agent Status: Reward: -46,  X: -1, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -46,  X: -1, Y: 3, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 68, agent Status: Reward: -68,  X: 1, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 47, agent Status: Reward: -47,  X: 0, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -1640,22 +1136,94 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| A | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 4, agent Status: Reward: -47,  X: 0, Y: 3, Gird: 3
+post agent Move: 4, agent Status: Reward: -47,  X: -1, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -47,  X: -1, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 48, agent Status: Reward: -48,  X: 0, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| A | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 2, agent Status: Reward: -48,  X: 0, Y: 3, Gird: 3
+post agent Move: 2, agent Status: Reward: -48,  X: 1, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -48,  X: 1, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 49, agent Status: Reward: -49,  X: 1, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | A | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 1, agent Status: Reward: -49,  X: 1, Y: 3, Gird: 3
+post agent Move: 1, agent Status: Reward: -49,  X: 1, Y: 2, Gird: 3
+Door and Error Check, agent Status: Reward: -49,  X: 1, Y: 2, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 50, agent Status: Reward: -50,  X: 1, Y: 2, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | A | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 1, agent Status: Reward: -68,  X: 1, Y: 2, Gird: 3
-post agent Move: 1, agent Status: Reward: -68,  X: 1, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -68,  X: 1, Y: 1, Gird: 3, round(self.x): 5
+pre agent Move: 1, agent Status: Reward: -50,  X: 1, Y: 2, Gird: 3
+post agent Move: 1, agent Status: Reward: -50,  X: 1, Y: 1, Gird: 3
+Door and Error Check, agent Status: Reward: -50,  X: 1, Y: 1, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 69, agent Status: Reward: -69,  X: 1, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 51, agent Status: Reward: -51,  X: 1, Y: 1, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -1664,9 +1232,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | A | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -1674,23 +1242,745 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 1, agent Status: Reward: -69,  X: 1, Y: 1, Gird: 3
-post agent Move: 1, agent Status: Reward: -69,  X: 1, Y: 0, Gird: 3
-Door and Error Check, agent Status: Reward: -69,  X: 1, Y: 0, Gird: 3, round(self.x): 5
+pre agent Move: 4, agent Status: Reward: -51,  X: 1, Y: 1, Gird: 3
+post agent Move: 4, agent Status: Reward: -51,  X: 0, Y: 1, Gird: 3
+Door and Error Check, agent Status: Reward: -51,  X: 0, Y: 1, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 70, agent Status: Reward: -70,  X: 1, Y: 0, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 52, agent Status: Reward: -52,  X: 0, Y: 1, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| A | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 4, agent Status: Reward: -52,  X: 0, Y: 1, Gird: 3
+post agent Move: 4, agent Status: Reward: -52,  X: -1, Y: 1, Gird: 3
+Door and Error Check, agent Status: Reward: -52,  X: -1, Y: 1, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 53, agent Status: Reward: -53,  X: 0, Y: 1, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| A | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 3, agent Status: Reward: -53,  X: 0, Y: 1, Gird: 3
+post agent Move: 3, agent Status: Reward: -53,  X: 0, Y: 2, Gird: 3
+Door and Error Check, agent Status: Reward: -53,  X: 0, Y: 2, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 54, agent Status: Reward: -54,  X: 0, Y: 2, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| A | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 4, agent Status: Reward: -54,  X: 0, Y: 2, Gird: 3
+post agent Move: 4, agent Status: Reward: -54,  X: -1, Y: 2, Gird: 3
+Door and Error Check, agent Status: Reward: -54,  X: -1, Y: 2, Gird: 3, round(self.x): 5
+end errorCheck atDoor: True, door: 4, (conditions: False), self.door: [3, 4], self.gridNum: 3
+At Door: Grid: 3, Direction: 4
+Iter: 1, Ep: 55, agent Status: Reward: -55,  X: 4, Y: 2, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | A |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 3, agent Status: Reward: -55,  X: 4, Y: 2, Gird: 2
+post agent Move: 3, agent Status: Reward: -55,  X: 4, Y: 3, Gird: 2
+Door and Error Check, agent Status: Reward: -55,  X: 4, Y: 3, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 56, agent Status: Reward: -56,  X: 4, Y: 3, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | 0 |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | A |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 4, agent Status: Reward: -56,  X: 4, Y: 3, Gird: 2
+post agent Move: 4, agent Status: Reward: -56,  X: 3, Y: 3, Gird: 2
+Door and Error Check, agent Status: Reward: -56,  X: 3, Y: 3, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 57, agent Status: Reward: -57,  X: 3, Y: 3, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | 0 |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | A | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 3, agent Status: Reward: -57,  X: 3, Y: 3, Gird: 2
+post agent Move: 3, agent Status: Reward: -57,  X: 3, Y: 4, Gird: 2
+Door and Error Check, agent Status: Reward: -57,  X: 3, Y: 4, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 58, agent Status: Reward: -58,  X: 3, Y: 4, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | 0 |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | A | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 2, agent Status: Reward: -58,  X: 3, Y: 4, Gird: 2
+post agent Move: 2, agent Status: Reward: -58,  X: 4, Y: 4, Gird: 2
+Door and Error Check, agent Status: Reward: -58,  X: 4, Y: 4, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 59, agent Status: Reward: -59,  X: 4, Y: 4, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | 0 |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | A |
+	|___|___|   |___|___|
+
+pre agent Move: 2, agent Status: Reward: -59,  X: 4, Y: 4, Gird: 2
+post agent Move: 2, agent Status: Reward: -59,  X: 5, Y: 4, Gird: 2
+Door and Error Check, agent Status: Reward: -59,  X: 5, Y: 4, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 60, agent Status: Reward: -60,  X: 4, Y: 4, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | 0 |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | A |
+	|___|___|   |___|___|
+
+pre agent Move: 4, agent Status: Reward: -60,  X: 4, Y: 4, Gird: 2
+post agent Move: 4, agent Status: Reward: -60,  X: 3, Y: 4, Gird: 2
+Door and Error Check, agent Status: Reward: -60,  X: 3, Y: 4, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 61, agent Status: Reward: -61,  X: 3, Y: 4, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | 0 |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | A | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 2, agent Status: Reward: -61,  X: 3, Y: 4, Gird: 2
+post agent Move: 2, agent Status: Reward: -61,  X: 4, Y: 4, Gird: 2
+Door and Error Check, agent Status: Reward: -61,  X: 4, Y: 4, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 62, agent Status: Reward: -62,  X: 4, Y: 4, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | 0 |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | A |
+	|___|___|   |___|___|
+
+pre agent Move: 2, agent Status: Reward: -62,  X: 4, Y: 4, Gird: 2
+post agent Move: 2, agent Status: Reward: -62,  X: 5, Y: 4, Gird: 2
+Door and Error Check, agent Status: Reward: -62,  X: 5, Y: 4, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 63, agent Status: Reward: -63,  X: 4, Y: 4, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | 0 |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | A |
+	|___|___|   |___|___|
+
+pre agent Move: 1, agent Status: Reward: -63,  X: 4, Y: 4, Gird: 2
+post agent Move: 1, agent Status: Reward: -63,  X: 4, Y: 3, Gird: 2
+Door and Error Check, agent Status: Reward: -63,  X: 4, Y: 3, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 64, agent Status: Reward: -64,  X: 4, Y: 3, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | 0 |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | A |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 3, agent Status: Reward: -64,  X: 4, Y: 3, Gird: 2
+post agent Move: 3, agent Status: Reward: -64,  X: 4, Y: 4, Gird: 2
+Door and Error Check, agent Status: Reward: -64,  X: 4, Y: 4, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 65, agent Status: Reward: -65,  X: 4, Y: 4, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | 0 |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | A |
+	|___|___|   |___|___|
+
+pre agent Move: 2, agent Status: Reward: -65,  X: 4, Y: 4, Gird: 2
+post agent Move: 2, agent Status: Reward: -65,  X: 5, Y: 4, Gird: 2
+Door and Error Check, agent Status: Reward: -65,  X: 5, Y: 4, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 66, agent Status: Reward: -66,  X: 4, Y: 4, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | 0 |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | A |
+	|___|___|   |___|___|
+
+pre agent Move: 2, agent Status: Reward: -66,  X: 4, Y: 4, Gird: 2
+post agent Move: 2, agent Status: Reward: -66,  X: 5, Y: 4, Gird: 2
+Door and Error Check, agent Status: Reward: -66,  X: 5, Y: 4, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 67, agent Status: Reward: -67,  X: 4, Y: 4, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | 0 |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | A |
+	|___|___|   |___|___|
+
+pre agent Move: 3, agent Status: Reward: -67,  X: 4, Y: 4, Gird: 2
+post agent Move: 3, agent Status: Reward: -67,  X: 4, Y: 5, Gird: 2
+Door and Error Check, agent Status: Reward: -67,  X: 4, Y: 5, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 68, agent Status: Reward: -68,  X: 4, Y: 4, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | 0 |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | A |
+	|___|___|   |___|___|
+
+pre agent Move: 1, agent Status: Reward: -68,  X: 4, Y: 4, Gird: 2
+post agent Move: 1, agent Status: Reward: -68,  X: 4, Y: 3, Gird: 2
+Door and Error Check, agent Status: Reward: -68,  X: 4, Y: 3, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 69, agent Status: Reward: -69,  X: 4, Y: 3, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | 0 |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | A |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 3, agent Status: Reward: -69,  X: 4, Y: 3, Gird: 2
+post agent Move: 3, agent Status: Reward: -69,  X: 4, Y: 4, Gird: 2
+Door and Error Check, agent Status: Reward: -69,  X: 4, Y: 4, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 70, agent Status: Reward: -70,  X: 4, Y: 4, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | 0 |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | A |
+	|___|___|   |___|___|
+
+pre agent Move: 1, agent Status: Reward: -70,  X: 4, Y: 4, Gird: 2
+post agent Move: 1, agent Status: Reward: -70,  X: 4, Y: 3, Gird: 2
+Door and Error Check, agent Status: Reward: -70,  X: 4, Y: 3, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 71, agent Status: Reward: -71,  X: 4, Y: 3, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | 0 |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | A |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 1, agent Status: Reward: -71,  X: 4, Y: 3, Gird: 2
+post agent Move: 1, agent Status: Reward: -71,  X: 4, Y: 2, Gird: 2
+Door and Error Check, agent Status: Reward: -71,  X: 4, Y: 2, Gird: 2, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: True), self.door: [2, 3], self.gridNum: 2
+Iter: 1, Ep: 72, agent Status: Reward: -72,  X: 4, Y: 2, Gird: 2
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 2, gridDoors: [2, 3]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	    |   |   |   |   |
+	  0 | 0 | G | 0 | A |
+	 ___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 2, agent Status: Reward: -72,  X: 4, Y: 2, Gird: 2
+post agent Move: 2, agent Status: Reward: -72,  X: 5, Y: 2, Gird: 2
+Door and Error Check, agent Status: Reward: -72,  X: 5, Y: 2, Gird: 2, round(self.x): 5
+end errorCheck atDoor: True, door: 2, (conditions: True), self.door: [2, 3], self.gridNum: 2
+At Door: Grid: 2, Direction: 2
+Iter: 1, Ep: 73, agent Status: Reward: -73,  X: 0, Y: 2, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| A | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 2, agent Status: Reward: -73,  X: 0, Y: 2, Gird: 3
+post agent Move: 2, agent Status: Reward: -73,  X: 1, Y: 2, Gird: 3
+Door and Error Check, agent Status: Reward: -73,  X: 1, Y: 2, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 74, agent Status: Reward: -74,  X: 1, Y: 2, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | A | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 4, agent Status: Reward: -74,  X: 1, Y: 2, Gird: 3
+post agent Move: 4, agent Status: Reward: -74,  X: 0, Y: 2, Gird: 3
+Door and Error Check, agent Status: Reward: -74,  X: 0, Y: 2, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 75, agent Status: Reward: -75,  X: 0, Y: 2, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| A | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 3, agent Status: Reward: -75,  X: 0, Y: 2, Gird: 3
+post agent Move: 3, agent Status: Reward: -75,  X: 0, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -75,  X: 0, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 76, agent Status: Reward: -76,  X: 0, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| A | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 3, agent Status: Reward: -76,  X: 0, Y: 3, Gird: 3
+post agent Move: 3, agent Status: Reward: -76,  X: 0, Y: 4, Gird: 3
+Door and Error Check, agent Status: Reward: -76,  X: 0, Y: 4, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 77, agent Status: Reward: -77,  X: 0, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| A | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 4, agent Status: Reward: -77,  X: 0, Y: 4, Gird: 3
+post agent Move: 4, agent Status: Reward: -77,  X: -1, Y: 4, Gird: 3
+Door and Error Check, agent Status: Reward: -77,  X: -1, Y: 4, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 78, agent Status: Reward: -78,  X: 0, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| A | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 2, agent Status: Reward: -78,  X: 0, Y: 4, Gird: 3
+post agent Move: 2, agent Status: Reward: -78,  X: 1, Y: 4, Gird: 3
+Door and Error Check, agent Status: Reward: -78,  X: 1, Y: 4, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 79, agent Status: Reward: -79,  X: 1, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | A | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 3, agent Status: Reward: -79,  X: 1, Y: 4, Gird: 3
+post agent Move: 3, agent Status: Reward: -79,  X: 1, Y: 5, Gird: 3
+Door and Error Check, agent Status: Reward: -79,  X: 1, Y: 5, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 80, agent Status: Reward: -80,  X: 1, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | A | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 1, agent Status: Reward: -80,  X: 1, Y: 4, Gird: 3
+post agent Move: 1, agent Status: Reward: -80,  X: 1, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -80,  X: 1, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 81, agent Status: Reward: -81,  X: 1, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | A | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 1, agent Status: Reward: -81,  X: 1, Y: 3, Gird: 3
+post agent Move: 1, agent Status: Reward: -81,  X: 1, Y: 2, Gird: 3
+Door and Error Check, agent Status: Reward: -81,  X: 1, Y: 2, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 82, agent Status: Reward: -82,  X: 1, Y: 2, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | A | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -1698,108 +1988,60 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 2, agent Status: Reward: -70,  X: 1, Y: 0, Gird: 3
-post agent Move: 2, agent Status: Reward: -70,  X: 2, Y: 0, Gird: 3
-Door and Error Check, agent Status: Reward: -70,  X: 2, Y: 0, Gird: 3, round(self.x): 5
+pre agent Move: 3, agent Status: Reward: -82,  X: 1, Y: 2, Gird: 3
+post agent Move: 3, agent Status: Reward: -82,  X: 1, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -82,  X: 1, Y: 3, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 71, agent Status: Reward: -71,  X: 2, Y: 0, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 83, agent Status: Reward: -83,  X: 1, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | A | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 2, agent Status: Reward: -83,  X: 1, Y: 3, Gird: 3
+post agent Move: 2, agent Status: Reward: -83,  X: 2, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -83,  X: 2, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 84, agent Status: Reward: -84,  X: 2, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | A | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 2, agent Status: Reward: -71,  X: 2, Y: 0, Gird: 3
-post agent Move: 2, agent Status: Reward: -71,  X: 3, Y: 0, Gird: 3
-Door and Error Check, agent Status: Reward: -71,  X: 3, Y: 0, Gird: 3, round(self.x): 5
+pre agent Move: 1, agent Status: Reward: -84,  X: 2, Y: 3, Gird: 3
+post agent Move: 1, agent Status: Reward: -84,  X: 2, Y: 2, Gird: 3
+Door and Error Check, agent Status: Reward: -84,  X: 2, Y: 2, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 72, agent Status: Reward: -72,  X: 3, Y: 0, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -72,  X: 3, Y: 0, Gird: 3
-post agent Move: 3, agent Status: Reward: -72,  X: 3, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -72,  X: 3, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 73, agent Status: Reward: -73,  X: 3, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 2, agent Status: Reward: -73,  X: 3, Y: 1, Gird: 3
-post agent Move: 2, agent Status: Reward: -73,  X: 4, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -73,  X: 4, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 74, agent Status: Reward: -74,  X: 4, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | A |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -74,  X: 4, Y: 1, Gird: 3
-post agent Move: 3, agent Status: Reward: -74,  X: 4, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -74,  X: 4, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 75, agent Status: Reward: -75,  X: 4, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 85, agent Status: Reward: -85,  X: 2, Y: 2, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -1808,9 +2050,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | A |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | A | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -1818,12 +2060,12 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 3, agent Status: Reward: -75,  X: 4, Y: 2, Gird: 3
-post agent Move: 3, agent Status: Reward: -75,  X: 4, Y: 3, Gird: 3
-Door and Error Check, agent Status: Reward: -75,  X: 4, Y: 3, Gird: 3, round(self.x): 5
+pre agent Move: 3, agent Status: Reward: -85,  X: 2, Y: 2, Gird: 3
+post agent Move: 3, agent Status: Reward: -85,  X: 2, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -85,  X: 2, Y: 3, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 76, agent Status: Reward: -76,  X: 4, Y: 3, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 86, agent Status: Reward: -86,  X: 2, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -1832,22 +2074,22 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | A |
+	| 0 | 0 | A | 0 | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 4, agent Status: Reward: -76,  X: 4, Y: 3, Gird: 3
-post agent Move: 4, agent Status: Reward: -76,  X: 3, Y: 3, Gird: 3
-Door and Error Check, agent Status: Reward: -76,  X: 3, Y: 3, Gird: 3, round(self.x): 5
+pre agent Move: 1, agent Status: Reward: -86,  X: 2, Y: 3, Gird: 3
+post agent Move: 1, agent Status: Reward: -86,  X: 2, Y: 2, Gird: 3
+Door and Error Check, agent Status: Reward: -86,  X: 2, Y: 2, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 77, agent Status: Reward: -77,  X: 3, Y: 3, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 87, agent Status: Reward: -87,  X: 2, Y: 2, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -1856,33 +2098,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -77,  X: 3, Y: 3, Gird: 3
-post agent Move: 1, agent Status: Reward: -77,  X: 3, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -77,  X: 3, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 78, agent Status: Reward: -78,  X: 3, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | A | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -1890,228 +2108,12 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 1, agent Status: Reward: -78,  X: 3, Y: 2, Gird: 3
-post agent Move: 1, agent Status: Reward: -78,  X: 3, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -78,  X: 3, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 79, agent Status: Reward: -79,  X: 3, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 2, agent Status: Reward: -79,  X: 3, Y: 1, Gird: 3
-post agent Move: 2, agent Status: Reward: -79,  X: 4, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -79,  X: 4, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 80, agent Status: Reward: -80,  X: 4, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | A |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 4, agent Status: Reward: -80,  X: 4, Y: 1, Gird: 3
-post agent Move: 4, agent Status: Reward: -80,  X: 3, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -80,  X: 3, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 81, agent Status: Reward: -81,  X: 3, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 2, agent Status: Reward: -81,  X: 3, Y: 1, Gird: 3
-post agent Move: 2, agent Status: Reward: -81,  X: 4, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -81,  X: 4, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 82, agent Status: Reward: -82,  X: 4, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | A |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -82,  X: 4, Y: 1, Gird: 3
-post agent Move: 3, agent Status: Reward: -82,  X: 4, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -82,  X: 4, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 83, agent Status: Reward: -83,  X: 4, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | A |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 4, agent Status: Reward: -83,  X: 4, Y: 2, Gird: 3
-post agent Move: 4, agent Status: Reward: -83,  X: 3, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -83,  X: 3, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 84, agent Status: Reward: -84,  X: 3, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -84,  X: 3, Y: 2, Gird: 3
-post agent Move: 3, agent Status: Reward: -84,  X: 3, Y: 3, Gird: 3
-Door and Error Check, agent Status: Reward: -84,  X: 3, Y: 3, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 85, agent Status: Reward: -85,  X: 3, Y: 3, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -85,  X: 3, Y: 3, Gird: 3
-post agent Move: 1, agent Status: Reward: -85,  X: 3, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -85,  X: 3, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 86, agent Status: Reward: -86,  X: 3, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -86,  X: 3, Y: 2, Gird: 3
-post agent Move: 1, agent Status: Reward: -86,  X: 3, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -86,  X: 3, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 87, agent Status: Reward: -87,  X: 3, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -87,  X: 3, Y: 1, Gird: 3
-post agent Move: 3, agent Status: Reward: -87,  X: 3, Y: 2, Gird: 3
+pre agent Move: 2, agent Status: Reward: -87,  X: 2, Y: 2, Gird: 3
+post agent Move: 2, agent Status: Reward: -87,  X: 3, Y: 2, Gird: 3
 Door and Error Check, agent Status: Reward: -87,  X: 3, Y: 2, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
 Iter: 1, Ep: 88, agent Status: Reward: -88,  X: 3, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -2120,9 +2122,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | A | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | A | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -2135,7 +2137,7 @@ post agent Move: 4, agent Status: Reward: -88,  X: 2, Y: 2, Gird: 3
 Door and Error Check, agent Status: Reward: -88,  X: 2, Y: 2, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
 Iter: 1, Ep: 89, agent Status: Reward: -89,  X: 2, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -2144,9 +2146,9 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | A | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
@@ -2154,12 +2156,12 @@ Grid #: 3, gridDoors: [3, 4]
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 2, agent Status: Reward: -89,  X: 2, Y: 2, Gird: 3
-post agent Move: 2, agent Status: Reward: -89,  X: 3, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -89,  X: 3, Y: 2, Gird: 3, round(self.x): 5
+pre agent Move: 3, agent Status: Reward: -89,  X: 2, Y: 2, Gird: 3
+post agent Move: 3, agent Status: Reward: -89,  X: 2, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -89,  X: 2, Y: 3, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 90, agent Status: Reward: -90,  X: 3, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
+Iter: 1, Ep: 90, agent Status: Reward: -90,  X: 2, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
 Grid #: 3, gridDoors: [3, 4]
 	_____________________
 	|   |   |   |   |   |
@@ -2168,234 +2170,236 @@ Grid #: 3, gridDoors: [3, 4]
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | A | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 4, agent Status: Reward: -90,  X: 2, Y: 3, Gird: 3
+post agent Move: 4, agent Status: Reward: -90,  X: 1, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -90,  X: 1, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 91, agent Status: Reward: -91,  X: 1, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | A | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 2, agent Status: Reward: -91,  X: 1, Y: 3, Gird: 3
+post agent Move: 2, agent Status: Reward: -91,  X: 2, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -91,  X: 2, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 92, agent Status: Reward: -92,  X: 2, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | A | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 4, agent Status: Reward: -92,  X: 2, Y: 3, Gird: 3
+post agent Move: 4, agent Status: Reward: -92,  X: 1, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -92,  X: 1, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 93, agent Status: Reward: -93,  X: 1, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | A | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 3, agent Status: Reward: -93,  X: 1, Y: 3, Gird: 3
+post agent Move: 3, agent Status: Reward: -93,  X: 1, Y: 4, Gird: 3
+Door and Error Check, agent Status: Reward: -93,  X: 1, Y: 4, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 94, agent Status: Reward: -94,  X: 1, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | A | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 2, agent Status: Reward: -94,  X: 1, Y: 4, Gird: 3
+post agent Move: 2, agent Status: Reward: -94,  X: 2, Y: 4, Gird: 3
+Door and Error Check, agent Status: Reward: -94,  X: 2, Y: 4, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 95, agent Status: Reward: -95,  X: 2, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | A | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 3, agent Status: Reward: -95,  X: 2, Y: 4, Gird: 3
+post agent Move: 3, agent Status: Reward: -95,  X: 2, Y: 5, Gird: 3
+Door and Error Check, agent Status: Reward: -95,  X: 2, Y: 5, Gird: 3, round(self.x): 5
+end errorCheck atDoor: True, door: 3, (conditions: False), self.door: [3, 4], self.gridNum: 3
+At Door: Grid: 3, Direction: 3
+Iter: 1, Ep: 96, agent Status: Reward: -96,  X: 2, Y: 0, Gird: 4
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 4, gridDoors: [4, 1]
+	________     _________
+	|   |   |   |   |   |
+	| 0 | 0 | A | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+
+pre agent Move: 1, agent Status: Reward: -96,  X: 2, Y: 0, Gird: 4
+post agent Move: 1, agent Status: Reward: -96,  X: 2, Y: -1, Gird: 4
+Door and Error Check, agent Status: Reward: -96,  X: 2, Y: -1, Gird: 4, round(self.x): 5
+end errorCheck atDoor: True, door: 1, (conditions: False), self.door: [4, 1], self.gridNum: 4
+At Door: Grid: 4, Direction: 1
+Iter: 1, Ep: 97, agent Status: Reward: -97,  X: 2, Y: 4, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | A | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 1, agent Status: Reward: -97,  X: 2, Y: 4, Gird: 3
+post agent Move: 1, agent Status: Reward: -97,  X: 2, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -97,  X: 2, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 98, agent Status: Reward: -98,  X: 2, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
+	|   |   |   |   |   |
+	| 0 | 0 | A | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|   |___|___|
+
+pre agent Move: 2, agent Status: Reward: -98,  X: 2, Y: 3, Gird: 3
+post agent Move: 2, agent Status: Reward: -98,  X: 3, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -98,  X: 3, Y: 3, Gird: 3, round(self.x): 5
+end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
+Iter: 1, Ep: 99, agent Status: Reward: -99,  X: 3, Y: 3, Gird: 3
+Grid World Printout: [<TheGrid.SmallGrid object at 0x7f363c0b74e0>, <TheGrid.SmallGrid object at 0x7f363c0cdda0>, <TheGrid.SmallGrid object at 0x7f363c0cdf98>, <TheGrid.SmallGrid object at 0x7f363c089390>]
+Grid #: 3, gridDoors: [3, 4]
+	_____________________
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   |
+	| 0 | 0 | 0 | 0 | 0 |
+	|___|___|___|___|___|
+	|   |   |   |   |   
+	| 0 | 0 | 0 | 0 | 0 
+	|___|___|___|___|___
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | A | 0 |
 	|___|___|___|___|___|
 	|   |   |   |   |   |
 	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
 	|___|___|   |___|___|
 
-pre agent Move: 4, agent Status: Reward: -90,  X: 3, Y: 2, Gird: 3
-post agent Move: 4, agent Status: Reward: -90,  X: 2, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -90,  X: 2, Y: 2, Gird: 3, round(self.x): 5
+pre agent Move: 2, agent Status: Reward: -99,  X: 3, Y: 3, Gird: 3
+post agent Move: 2, agent Status: Reward: -99,  X: 4, Y: 3, Gird: 3
+Door and Error Check, agent Status: Reward: -99,  X: 4, Y: 3, Gird: 3, round(self.x): 5
 end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 91, agent Status: Reward: -91,  X: 2, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 4, agent Status: Reward: -91,  X: 2, Y: 2, Gird: 3
-post agent Move: 4, agent Status: Reward: -91,  X: 1, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -91,  X: 1, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 92, agent Status: Reward: -92,  X: 1, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -92,  X: 1, Y: 2, Gird: 3
-post agent Move: 1, agent Status: Reward: -92,  X: 1, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -92,  X: 1, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 93, agent Status: Reward: -93,  X: 1, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 2, agent Status: Reward: -93,  X: 1, Y: 1, Gird: 3
-post agent Move: 2, agent Status: Reward: -93,  X: 2, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -93,  X: 2, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 94, agent Status: Reward: -94,  X: 2, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -94,  X: 2, Y: 1, Gird: 3
-post agent Move: 1, agent Status: Reward: -94,  X: 2, Y: 0, Gird: 3
-Door and Error Check, agent Status: Reward: -94,  X: 2, Y: 0, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 95, agent Status: Reward: -95,  X: 2, Y: 0, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -95,  X: 2, Y: 0, Gird: 3
-post agent Move: 3, agent Status: Reward: -95,  X: 2, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -95,  X: 2, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 96, agent Status: Reward: -96,  X: 2, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 4, agent Status: Reward: -96,  X: 2, Y: 1, Gird: 3
-post agent Move: 4, agent Status: Reward: -96,  X: 1, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -96,  X: 1, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 97, agent Status: Reward: -97,  X: 1, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | A | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 2, agent Status: Reward: -97,  X: 1, Y: 1, Gird: 3
-post agent Move: 2, agent Status: Reward: -97,  X: 2, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -97,  X: 2, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 98, agent Status: Reward: -98,  X: 2, Y: 1, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 3, agent Status: Reward: -98,  X: 2, Y: 1, Gird: 3
-post agent Move: 3, agent Status: Reward: -98,  X: 2, Y: 2, Gird: 3
-Door and Error Check, agent Status: Reward: -98,  X: 2, Y: 2, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 99, agent Status: Reward: -99,  X: 2, Y: 2, Gird: 3
-Grid World Printout: [<TheGrid.SmallGrid object at 0x7fbffaf854e0>, <TheGrid.SmallGrid object at 0x7fbffaf9bda0>, <TheGrid.SmallGrid object at 0x7fbffaf9bf98>, <TheGrid.SmallGrid object at 0x7fbffaf57390>]
-Grid #: 3, gridDoors: [3, 4]
-	_____________________
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | A | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|___|___|___|
-	|   |   |   |   |   |
-	| 0 | 0 | 0 | 0 | 0 |
-	|___|___|   |___|___|
-
-pre agent Move: 1, agent Status: Reward: -99,  X: 2, Y: 2, Gird: 3
-post agent Move: 1, agent Status: Reward: -99,  X: 2, Y: 1, Gird: 3
-Door and Error Check, agent Status: Reward: -99,  X: 2, Y: 1, Gird: 3, round(self.x): 5
-end errorCheck atDoor: False, door: 0, (conditions: False), self.door: [3, 4], self.gridNum: 3
-Iter: 1, Ep: 100, agent Status: Reward: -100,  X: 2, Y: 1, Gird: 3
+Iter: 1, Ep: 100, agent Status: Reward: -100,  X: 4, Y: 3, Gird: 3
