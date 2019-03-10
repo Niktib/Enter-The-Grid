@@ -94,7 +94,7 @@ class SmallGrid:
 				pass
 		pStr = pStr + "_\n"
 		for i in range(self.x):
-			if 4 in self.doors and i == int(self.x/2):
+			if 2 in self.doors and i == int(self.x/2):
 				pStr = pStr + "\t"
 				for j in range(self.y):
 					pStr = pStr + "|   "
@@ -110,7 +110,7 @@ class SmallGrid:
 				for j in range(self.y):
 					pStr = pStr + "|___"
 				pStr = pStr + "\n"
-			elif 2 in self.doors and i == int(self.x/2):
+			elif 4 in self.doors and i == int(self.x/2):
 				pStr = pStr + "\t"
 				for j in range(self.y):
 					if j == 0:
