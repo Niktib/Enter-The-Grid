@@ -1,11 +1,11 @@
 import random
 from datetime import datetime
 from TheGrid import SmallGrid
-
+import time
 debug = True
 
 class GridWorld:
-	def __init__(self, agent=None, vertical=5, horizontal=5, p1=0.8, p2=0.1, numOfGrids=4):
+	def __init__(self, goal,agent=None, vertical=5, horizontal=5, p1=0.8, p2=0.1, numOfGrids=4):
 		#Initialize should create the gridworld environment and accept an array of terminal states.
 		random.seed(datetime.now())
 		self.p1 = p1
@@ -15,7 +15,7 @@ class GridWorld:
 		self.map = dict()
 		self.agent = agent
 		self.arrayOfGrids = []
-		self.goal = {"grid": 2, "x" : 2 , "y" : 2}
+		self.goal = goal
 		for i in range(1,numOfGrids):
 			self.arrayOfGrids.append(SmallGrid(vertical,horizontal,[i, i+1], i))
 		self.arrayOfGrids.append(SmallGrid(vertical,horizontal,[4, 1], 4))
@@ -100,12 +100,13 @@ class GridWorld:
 		self.map = mapBasic
 		print("Basic Map: {}".format(self.map)) if debug else False #debug variable at top of file 
 	
-	def printOut(self):
+	def printOut(self, animate=False):
 		print("Grid World Printout: {}".format(self.arrayOfGrids))	
 		for grid in self.arrayOfGrids:
 			#for now only print agent current grid
 			if grid.gridNumber == self.agent.currentGrid:
 				print("Grid #: {}, gridDoors: {}".format(grid.gridNumber,grid.doors)) if debug else False #debug
 				grid.printOut(self.agent, self.goal)
+				time.sleep(1) if animate else False
 				# Possibly make grid print out return string, and use map to put ones connected to each other in correct order
 				# then use new line to make next line of grid lower and append string 
