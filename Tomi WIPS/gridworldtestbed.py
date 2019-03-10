@@ -10,7 +10,7 @@ class testbed:
         if randomSpwan:
             agent = gridAgent.Agent(random.randint(1,4),random.randint(1,4),random.randint(0,len(self.gridWorld.arrayOfGrids)),None)
         else:
-            agent = gridAgent.Agent(2,2,1,None)
+            agent = gridAgent.Agent(2,2,3,None)
 
         self.gridWorld.pieceItTogether()
         self.gridWorld.insertAgent(agent)
@@ -24,4 +24,4 @@ class testbed:
                 print("Iter: {}, Ep: {}, {}".format(iter, ep, self.gridWorld.agent.playerStatus())) if debug else False #debug
 
 test = testbed()
-test.run(1, 5)
+test.run(1, 6)

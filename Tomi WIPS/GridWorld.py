@@ -15,6 +15,7 @@ class GridWorld:
 		self.map = dict()
 		self.agent = agent
 		self.arrayOfGrids = []
+		self.goal = {"grid": 2, "x" : 2 , "y" : 2}
 		for i in range(1,numOfGrids):
 			self.arrayOfGrids.append(SmallGrid(vertical,horizontal,[i, i+1], i))
 		self.arrayOfGrids.append(SmallGrid(vertical,horizontal,[4, 1], 4))
@@ -32,10 +33,23 @@ class GridWorld:
 	def agentMove(self):
 		#Results= { 'atDoor' : atDoor (True or false), 'door' : Cardinal direction of door}
 		#1 = North, 2 = East, 3 = South, 4 = West
-		results = self.arrayOfGrids[self.agent.currentGrid].makeYourMove(self.agent, 1)
+		results = self.arrayOfGrids[self.agent.currentGrid-1].makeYourMove(self.agent, 1)
+		if (self.agent.currentGrid == self.goal['grid'] and self.agent.playerX == self.goal['x'] and self.agent.playerY == self.goal['y']):
+			self.agent.reward += 100
+			return
 		if results['atDoor']:
 			print("At Door: Grid: {}, Direction: {}".format(self.agent.currentGrid,results['door']))
 			self.agent.currentGrid = self.map[self.agent.currentGrid][results['door']]
+			if results['door'] == 1:
+				self.agent.playerY = self.arrayOfGrids[self.agent.currentGrid-1].y-1
+			elif results['door'] == 2:
+				self.agent.playerX = 0
+			elif results['door'] == 3:
+				self.agent.playerX = int(self.arrayOfGrids[self.agent.currentGrid-1].x/2)
+				self.agent.playerY = 0
+			elif results['door'] == 4:
+				self.agent.playerY = int(self.arrayOfGrids[self.agent.currentGrid-1].y/2)
+				self.agent.playerX = int(self.arrayOfGrids[self.agent.currentGrid-1].x-1)
 			self.agent.reward += self.reward
 		else:
 			self.agent.reward += self.reward
@@ -87,8 +101,9 @@ class GridWorld:
 		print("Basic Map: {}".format(self.map)) if debug else False #debug variable at top of file 
 	
 	def printOut(self):
+		print("Grid World Printout: {}".format(self.arrayOfGrids))	
 		for grid in self.arrayOfGrids:
-			print("Grid #: {}".format(grid.gridNumber)) if debug else False #debug
-			grid.printOut(self.agent)
+			print("Grid #: {}, gridDoors: {}".format(grid.gridNumber,grid.doors)) if debug else False #debug
+			grid.printOut(self.agent, self.goal)
 			# Possibly make grid print out return string, and use map to put ones connected to each other in correct order
 			# then use new line to make next line of grid lower and append string 
