@@ -1,6 +1,9 @@
 import GridWorld
 import gridAgent
 import random
+import mc
+import q
+import sarsa
 
 debug = True
 class testbed:
@@ -8,7 +11,7 @@ class testbed:
     def __init__(self, randomSpwan=False):
         self.gridWorld = GridWorld.GridWorld({"grid": 2, "x" : 2 , "y" : 2})
         if randomSpwan:
-            agent = gridAgent.Agent(random.randint(1,4),random.randint(1,4),random.randint(0,len(self.gridWorld.arrayOfGrids)),None)
+            agent = gridAgent.Agent(random.randint(1,4),random.randint(1,4),random.randint(0,len(self.gridWorld.arrayOfGrids)),mc.monteCarlo())
         else:
             agent = gridAgent.Agent(2,2,3,None)
 

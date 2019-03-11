@@ -2,10 +2,12 @@ import random
 
 class monteCarlo:
      
-    def __init__(self, numOfActions=4, epsilon = 0.1):
+    def __init__(self, epsilon = 0.1):
 		self.epsilon = epsilon
-        self.numOfActions = numOfActions
-		 
+		
+	def numberOfActions(self, numOfActions=4):
+		self.numOfActions = numOfActions
+		
 	def setUpState(self, blankStateActionArray, blankStateArray):
 		self.stateMap = blankStateArray
 		self.stateActionMap = blankStateActionArray

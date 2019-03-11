@@ -1,5 +1,7 @@
 import random
 import mc
+import q
+import sarsa
 class Agent:
 
     def __init__(self, X, Y, grid, policy):
@@ -9,7 +11,9 @@ class Agent:
         self.currentGrid = grid
         self.reward = 0
 		self.numOfActions = 4
-        self.policy = mc.monteCarlo(self.numOfActions)
+		
+        self.policy = policy
+		self.policy.numberOfActions(self.numOfActions)
 		
         self.North = 1
         self.East = 2
