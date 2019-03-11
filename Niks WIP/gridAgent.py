@@ -25,16 +25,20 @@ class Agent:
 		
 	def playerStateSetUp(self, gridDimensions):
 	#Recieves GridDimensions from GridWorld
-		stateMap = []			
+		stateMap = []
+		stateActionMap = []
 		for i in range(gridDimensions):
 			#X dimensions of the grids
 			individualGrid = [None] * gridDimensions[0]
+			individualActionGrid = [None] * gridDimensions[0]
 			for j in range(gridDimensions[0]):
 				#Y dimensions of the grid
 				individualGrid[j] = [None] * gridDimensions[1]
+				individualActionGrid[j] = [None] * gridDimensions[1]
 				for k in range(gridDimensions[1]):
 					#All possible Actions
-					individualGrid[j][k] = [0] * self.numOfActions
+					individualActionGrid[j][k] = [0] * self.numOfActions
 			#Add it to the total stateMap
+			stateActionMap.add(individualActionGrid)
 			stateMap.add(individualGrid)
-		self.policy.setUpState(stateMap)
+		self.policy.setUpState(stateMap, stateActionMap)

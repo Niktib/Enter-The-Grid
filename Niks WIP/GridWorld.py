@@ -5,7 +5,7 @@ import time
 debug = True
 
 class GridWorld:
-	def __init__(self, goal,agent=None, vertical=5, horizontal=5, p1=0.8, p2=0.1, numOfGrids=4):
+	def __init__(self, start, goal,agent=None, vertical=5, horizontal=5, p1=0.8, p2=0.1, numOfGrids=4):
 		#Initialize should create the gridworld environment and accept an array of terminal states.
 		random.seed(datetime.now())
 		self.p1 = p1
@@ -14,7 +14,10 @@ class GridWorld:
 		self.currentGrid = 1
 		self.map = dict()
 		self.arrayOfGrids = []
+		self.startPoint = start
 		self.goal = goal
+		self.vertical = vertical
+		self.horizontal = horizontal
 		for i in range(1,numOfGrids):
 			self.arrayOfGrids.append(SmallGrid(vertical,horizontal,[i, i+1], i))
 		self.arrayOfGrids.append(SmallGrid(vertical,horizontal,[4, 1], 4))
