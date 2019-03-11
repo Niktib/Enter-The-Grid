@@ -9,3 +9,6 @@ class qlearning:
 	def setUpState(self, blankStateActionArray, blankStateArray):
 		self.stateMap = blankStateArray
 		self.stateActionMap = blankStateActionArray
+	
+	def decision(self, state):
+	

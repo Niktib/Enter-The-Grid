@@ -30,6 +30,7 @@ class GridWorld:
 		3 has a south(Grid 4) and west door (grid 2)
 		4 has a north(Grid 3) and west door (grid 1)
 		'''
+		
 	def understandingState(self):
 		#returns an array with the dimensions for each grid in the grids numbered slot
 		gridMap = []

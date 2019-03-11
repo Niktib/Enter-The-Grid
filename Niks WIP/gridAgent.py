@@ -12,17 +12,15 @@ class Agent:
         self.reward = 0
 		self.numOfActions = 4
 		
+		self.stateActionArray = []
         self.policy = policy
 		self.policy.numberOfActions(self.numOfActions)
-		
-        self.North = 1
-        self.East = 2
-        self.South = 3
-        self.West = 4
 
     def move(self):
         state = {'grid' : self.currentGrid, 'x' : self.playerX, 'y' : self.playerY}
-        return self.policy.decision(state)
+		action = self.policy.decision(state)
+		self.stateActionArray.add([state, action])
+        return action
 
     def playerStatus(self):
         return "agent Status: Reward: {},  X: {}, Y: {}, Grid: {}".format(self.reward, self.playerX,self.playerY,self.currentGrid)
