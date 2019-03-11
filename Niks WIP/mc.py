@@ -36,8 +36,10 @@ class monteCarlo:
 		statesTraversed.reverse()
 		totalReturn = 0
 		for i in range(statesTraversed)
-			s = statesTraversed[i]
+			s = statesTraversed[i][0]
+			a = statesTraversed[i][1]
+			r = statesTraversed[i][2]
+			totalReturn += r + self.gamma * totalReturn
 			self.stateMap[s[0]][s[1]][s[2]] = 0 #need the update function for state
 			self.stateActionMap[s[0]][s[1]][s[2]][s[3]] = 0 #need the update function for action picking
-			totalReturn += statesTraversed[2] + self.gamma * totalReturn
 			

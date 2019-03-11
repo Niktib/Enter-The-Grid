@@ -17,7 +17,7 @@ class Agent:
 		self.policy.numberOfActions(self.numOfActions)
 
     def move(self):
-        state = {'grid' : self.currentGrid, 'x' : self.playerX, 'y' : self.playerY}
+        state = [self.currentGrid, self.playerX, self.playerY]
 		action = self.policy.decision(state)
 		self.stateActionArray.add([state, action])
         return action
@@ -38,7 +38,7 @@ class Agent:
         return "agent Status: Reward: {},  X: {}, Y: {}, Grid: {}".format(self.reward, self.playerX,self.playerY,self.currentGrid)
 	
 	def policyDetails(self):
-		self.policy.updateStates()
+		self.policy.updateStates(self.stateActionArray)
 		return self.policy
 	
 	def playerStateSetUp(self, gridDimensions):
