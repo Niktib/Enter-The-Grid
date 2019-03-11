@@ -21,10 +21,13 @@ class monteCarlo:
 	
 	def explore(self, state):
 		#contains the values each action has been granted
+		actionArray = []
 		arrayOfActions = self.stateActionMap[state[0]][state[1]][state[2]]
+		for i in range(arrayOfActions):
+			actionArray.add(arrayOfActions[0])
 		#each index is representative of the action,so 1 = North, 2 = east, etc. 
 		#By finding the max and its index we know the greedy action.
-		return arrayOfActions.index(max(arrayOfActions))
+		return arrayOfActions.index(max(actionArray))
         
 	def explore(self):
 		#No need to figure out which action in the state, we just need a random action
