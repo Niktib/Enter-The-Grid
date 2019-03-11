@@ -21,7 +21,19 @@ class Agent:
 		action = self.policy.decision(state)
 		self.stateActionArray.add([state, action])
         return action
-
+	
+	def results(self, resultsArray):
+		self.playerX = resultsArray[0]
+		self.playerY = resultsArray[1]
+		stateReward(resultsArray[2])
+		self.reward += resultsArray[2]
+	
+	def stateReward(self, rewardRecd):
+		self.stateActionArray[-1].add(rewardRecd)
+	
+	def agentState(self):
+		return [self.playerX, self.playerY, self.currentGrid]
+	
     def playerStatus(self):
         return "agent Status: Reward: {},  X: {}, Y: {}, Grid: {}".format(self.reward, self.playerX,self.playerY,self.currentGrid)
 		
@@ -35,7 +47,7 @@ class Agent:
 			individualActionGrid = [None] * gridDimensions[0]
 			for j in range(gridDimensions[0]):
 				#Y dimensions of the grid
-				individualGrid[j] = [None] * gridDimensions[1]
+				individualGrid[j] = [0] * gridDimensions[1]
 				individualActionGrid[j] = [None] * gridDimensions[1]
 				for k in range(gridDimensions[1]):
 					#All possible Actions
