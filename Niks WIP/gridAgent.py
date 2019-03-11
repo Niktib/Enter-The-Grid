@@ -55,7 +55,7 @@ class Agent:
 				individualActionGrid[j] = [None] * gridDimensions[1]
 				for k in range(gridDimensions[1]):
 					#All possible Actions
-					individualActionGrid[j][k] = [0] * self.numOfActions
+					individualActionGrid[j][k] = [[0,0]] * self.numOfActions
 			#Add it to the total stateMap
 			stateActionMap.add(individualActionGrid)
 			stateMap.add(individualGrid)

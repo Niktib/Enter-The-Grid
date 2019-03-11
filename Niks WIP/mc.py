@@ -19,7 +19,6 @@ class monteCarlo:
 		else:
 			return self.exploit(state)
 	
-	
 	def explore(self, state):
 		#contains the values each action has been granted
 		arrayOfActions = self.stateActionMap[state[0]][state[1]][state[2]]
@@ -36,10 +35,13 @@ class monteCarlo:
 		statesTraversed.reverse()
 		totalReturn = 0
 		for i in range(statesTraversed)
-			s = statesTraversed[i][0]
-			a = statesTraversed[i][1]
-			r = statesTraversed[i][2]
-			totalReturn += r + self.gamma * totalReturn
+			s = statesTraversed[i][0] #State
+			a = statesTraversed[i][1] #Chosen Action
+			r = statesTraversed[i][2] #Reward
+			totalReturn += r + self.gamma * totalReturn 
+			currentValue = self.stateActionMap[s[0]][s[1]][s[2]][a][0]
+			numberOfTimesPicked = self.stateActionMap[s[0]][s[1]][s[2]][a][1]
 			self.stateMap[s[0]][s[1]][s[2]] = 0 #need the update function for state
-			self.stateActionMap[s[0]][s[1]][s[2]][s[3]] = 0 #need the update function for action picking
+			#Qn = Qn + 1/n (Rt + Qn)
+			self.stateActionMap[s[0]][s[1]][s[2]][a] = currentValue + 1/numberOfTimesPicked(totalReturn + currentValue) #need the update function for action picking
 			
