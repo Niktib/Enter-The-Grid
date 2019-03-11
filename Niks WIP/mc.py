@@ -2,8 +2,9 @@ import random
 
 class monteCarlo:
      
-    def __init__(self, epsilon = 0.1):
+    def __init__(self, epsilon = 0.1, gamma = 0.9):
 		self.epsilon = epsilon
+		self.gamma = gamma
 		
 	def numberOfActions(self, numOfActions=4):
 		self.numOfActions = numOfActions
@@ -30,10 +31,13 @@ class monteCarlo:
 		#No need to figure out which action in the state, we just need a random action
 		return random.randint(1,self.numOfActions)
 		
-	def updateStates(self, statesTraversed, returnValue):
+	def updateStates(self, statesTraversed):
 		#statesTraversed is an array in format [grid, x, y, action]
+		statesTraversed.reverse()
+		totalReturn = 0
 		for i in range(statesTraversed)
 			s = statesTraversed[i]
 			self.stateMap[s[0]][s[1]][s[2]] = 0 #need the update function for state
 			self.stateActionMap[s[0]][s[1]][s[2]][s[3]] = 0 #need the update function for action picking
+			totalReturn += statesTraversed[2] + self.gamma * totalReturn
 			

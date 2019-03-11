@@ -36,7 +36,11 @@ class Agent:
 	
     def playerStatus(self):
         return "agent Status: Reward: {},  X: {}, Y: {}, Grid: {}".format(self.reward, self.playerX,self.playerY,self.currentGrid)
-		
+	
+	def policyDetails(self):
+		self.policy.updateStates()
+		return self.policy
+	
 	def playerStateSetUp(self, gridDimensions):
 	#Recieves GridDimensions from GridWorld
 		stateMap = []

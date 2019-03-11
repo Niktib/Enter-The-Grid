@@ -15,6 +15,7 @@ class GridWorld:
 		self.arrayOfGrids = []
 		self.startPoint = start
 		self.goal = goal
+		self.finished = False
 		self.vertical = vertical
 		self.horizontal = horizontal
 		for i in range(1,numOfGrids):
@@ -41,6 +42,7 @@ class GridWorld:
 		results = self.arrayOfGrids[playerPos[2]-1].makeYourMove(playerPos[0], playerPos[1],  move, randomMovement)
 		if (playerPos[2] == self.goal['grid'] and playerPos[0] == self.goal['x'] and playerPos[1] == self.goal['y']):
 			reward = 100
+			self.finished = True
 			return [results['playerPos[0]'], results['playerPos[1]'], reward]
 		if results['atDoor']:
 			print("At Door: Grid: {}, Direction: {}".format(playerPos[2],results['door']))
@@ -71,7 +73,7 @@ class GridWorld:
 			return 2		
 		elif result < self.p1 + self.p2 + adjacent:
 			#Counter Clockwise of choice
-			return 3		
+			return 3
 		else:
 			#Clockwise of choice
 			return 4
@@ -106,7 +108,7 @@ class GridWorld:
 		self.map = mapBasic
 		print("Basic Map: {}".format(self.map)) if debug else False #debug variable at top of file 
 	
-	def printOut(self, animate=False, playerPos):
+	def printOut(self, playerPos, animate=False):
 		print("Grid World Printout: {}".format(self.arrayOfGrids))	
 		for grid in self.arrayOfGrids:
 			#for now only print agent current grid
