@@ -33,7 +33,7 @@ class GridWorld:
 		#returns an array with the dimensions for each grid in the grids numbered slot
 		gridMap = []
 		for i in range(1,numOfGrids):
-			gridMap.add(self.arrayOfGrids[i].dimensionsOfGrid())
+			gridMap.append(self.arrayOfGrids[i].dimensionsOfGrid())
 		return gridMap
 
 	def agentMove(self, playerPos, move):

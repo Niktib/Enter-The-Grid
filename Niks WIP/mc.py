@@ -19,12 +19,16 @@ class monteCarlo:
 		else:
 			return self.exploit(state)
 	
-	def explore(self, state):
+	def exploit(self, state):
 		#contains the values each action has been granted
 		actionArray = []
+		numberOfTimesVisited = []
 		arrayOfActions = self.stateActionMap[state[0]][state[1]][state[2]]
 		for i in range(arrayOfActions):
-			actionArray.add(arrayOfActions[0])
+			actionArray.append(arrayOfActions[0])
+			numberOfTimesVisited.append(arrayOfActions[1])
+		#First time visit always explore
+		if max(numberOfTimesVisited) == 0: return self.explore()
 		#each index is representative of the action,so 1 = North, 2 = east, etc. 
 		#By finding the max and its index we know the greedy action.
 		return arrayOfActions.index(max(actionArray))

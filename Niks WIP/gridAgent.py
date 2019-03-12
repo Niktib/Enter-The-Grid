@@ -19,7 +19,7 @@ class Agent:
     def move(self):
         state = [self.currentGrid, self.playerX, self.playerY]
 		action = self.policy.decision(state)
-		self.stateActionArray.add([state, action])
+		self.stateActionArray.append([state, action])
         return action
 	
 	def results(self, resultsArray):
@@ -29,7 +29,7 @@ class Agent:
 		self.reward += resultsArray[2]
 	
 	def stateReward(self, rewardRecd):
-		self.stateActionArray[-1].add(rewardRecd)
+		self.stateActionArray[-1].append(rewardRecd)
 	
 	def agentState(self):
 		return [self.playerX, self.playerY, self.currentGrid]
@@ -57,6 +57,6 @@ class Agent:
 					#All possible Actions
 					individualActionGrid[j][k] = [[0,0]] * self.numOfActions
 			#Add it to the total stateMap
-			stateActionMap.add(individualActionGrid)
-			stateMap.add(individualGrid)
+			stateActionMap.append(individualActionGrid)
+			stateMap.append(individualGrid)
 		self.policy.setUpState(stateMap, stateActionMap)

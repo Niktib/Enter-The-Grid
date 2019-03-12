@@ -11,3 +11,4 @@ class sarsa:
 		self.stateActionMap = blankStateActionArray
 		
 	def decision(self, state):
+	
