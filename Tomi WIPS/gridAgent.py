@@ -2,7 +2,7 @@ import random
 import mc
 import GridWorld
 
-debug = True
+debug = False
 
 class Agent:
 
@@ -48,3 +48,4 @@ class Agent:
         self.currentGrid = Grid
         self.moveCount = 0
         self.stateActionArray = []
+        self.reward = 0

@@ -158,3 +158,26 @@ class GridState:
 			# Possibly make grid print out return string, and use map to put ones connected to each other in correct order
 			# then use new line to make next line of grid lower and append string
 		return outStr
+	
+	def printOutPolicy(self):
+		print("Grid World Printout: {}".format(self.arrayOfGrids))
+		outStr = ""	
+		#1 = North, 2 = East, 3 = South, 4 = West
+		for grid in self.arrayOfGrids:
+			#for now only print agent current grid
+			outStr += "Grid #: {}, gridDoors: {}\n".format(grid.gridNumber,grid.doors)
+			for i in range(len(grid.grid)):
+				for j in range(len(grid.grid[i])):
+					if grid.grid[i][j] == 1:
+						outStr += "^" + ","
+					elif grid.grid[i][j] == 2:
+						outStr += ">" + ","
+					elif grid.grid[i][j] == 3:
+						outStr += "v" + ","
+					elif grid.grid[i][j] == 4:
+						outStr += "<" + ","
+				outStr += "\n"
+			#grid.printOut(None, self.goal)
+			# Possibly make grid print out return string, and use map to put ones connected to each other in correct order
+			# then use new line to make next line of grid lower and append string
+		return outStr

@@ -59,19 +59,22 @@ class monteCarlo:
                #self.stateMap[s[0]][s[1]][s[2]] = 0 #need the update function for state
                #Qn = Qn + 1/n (Rt + Qn)
                self.StateAction[step['action']-1].arrayOfGrids[step['grid']-1].grid[step['x']][step['y']] = currentValue + (1/numberOfTimesPicked) * (totalReturn - currentValue) #need the update function for action picking
-               bestAction = step['action']-1
+               bestAction = step['action']
                bestActionValue = self.StateAction[step['action']-1].arrayOfGrids[step['grid']-1].grid[step['x']][step['y']]
                for action in range(len(self.StateAction)):
                     if bestActionValue <  self.StateAction[action].arrayOfGrids[step['grid']-1].grid[step['x']][step['y']]:
                          bestAction = action+1 #because index starts at 0 and action numbered 1-4
+                         bestActionValue = self.StateAction[action].arrayOfGrids[step['grid']-1].grid[step['x']][step['y']]
+                    if self.policy.arrayOfGrids[step['grid']-1].grid[step['x']][step['y']] != bestAction:
+                         self.policy.arrayOfGrids[step['grid']-1].grid[step['x']][step['y']] = bestAction
 
 
      def printPolicyValue(self):
-          print("***************************************POLICY****************************************\n{}\n***************************************POLICY****************************************\n".format(self.policy.printOut())) if debug else False
+          print("***************************************POLICY****************************************\n{}\n***************************************POLICY****************************************\n".format(self.policy.printOutPolicy())) if debug else False #debug
           for i in range(len(self.StateAction)):
                print("STATEACTION: {}".format(i))
-               print("\n***************************************StateAction****************************************\n{}\n***************************************StateAction****************************************".format(self.StateAction[i].printOut()))
-               print("\n***************************************StateActionTimesPICKED****************************************\n{}\n***************************************StateAction****************************************".format(self.StateActionTimesVisted[i].printOut()))
+               print("\n***************************************StateAction****************************************\n{}\n***************************************StateAction****************************************".format(self.StateAction[i].printOut())) #debug
+               print("\n***************************************StateActionTimesPICKED****************************************\n{}\n***************************************StateAction****************************************".format(self.StateActionTimesVisted[i].printOut())) #debug
 
           print("POLICY: Grid World Printout: {}".format(self.policy.arrayOfGrids)) if debug else False
           print("VALUE: Grid World Printout: {}".format(self.StateAction)) if debug else False
