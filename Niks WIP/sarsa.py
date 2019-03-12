@@ -35,16 +35,14 @@ class sarsa:
 		return random.randint(1,self.numOfActions)
 		
 	def updateStates(self, statesTraversed, newState):
-		#statesTraversed is an array in format [grid, x, y, action]
-		statesTraversed.reverse()
-		totalReturn = 0
-		for i in range(statesTraversed)
-			s = statesTraversed[i][0] #State
-			a = statesTraversed[i][1] #Chosen Action
-			r = statesTraversed[i][2] #Reward
-			totalReturn += r + self.gamma * totalReturn 
-			currentValue = self.stateActionMap[s[0]][s[1]][s[2]][a][0]
-			numberOfTimesPicked = self.stateActionMap[s[0]][s[1]][s[2]][a][1]
-			self.stateMap[s[0]][s[1]][s[2]] = 0 #need the update function for state
-			#Qn = Qn + 1/n (Rt + Qn)
-			self.stateActionMap[s[0]][s[1]][s[2]][a] = currentValue + 1/numberOfTimesPicked(totalReturn - currentValue) #need the update function for action picking
+		#statesTraversed is an array in format [[grid, x, y], action]
+		#New state in similar format, but no reward
+		s = statesTraversed[0] #State
+		a = statesTraversed[1] #Chosen Action
+		r = statesTraversed[2] #Reward
+		sPrime = newState[0] #New State
+		aPrime = newState[1] #New Action
+		returnValue = r + self.gamma * self.stateActionMap[sPrime[0]][sPrime[1]][sPrime[2]][aPrime][0]
+		currentValue = self.stateActionMap[s[0]][s[1]][s[2]][a][0]
+		#Qn = Qn + aplha * (Rt + Qn)
+		self.stateActionMap[s[0]][s[1]][s[2]][a][0] = currentValue + self.alpha * (returnValue - currentValue) #need the update function for action picking
