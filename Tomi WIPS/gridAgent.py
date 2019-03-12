@@ -1,6 +1,9 @@
 import random
 import mc
 import GridWorld
+
+debug = True
+
 class Agent:
 
     def __init__(self, gridWorld, policy):
@@ -16,11 +19,24 @@ class Agent:
         self.West = 4
         self.Done = False
         self.moveCount = 0
+        self.stateActionArray = []
 
     def move(self):
         state = {'grid' : self.currentGrid, 'x' : self.playerX, 'y' : self.playerY}
-        self.moveCount += 1
-        return self.policy.decision(state)
+        self.moveCount += 1 
+        move = self.policy.onPolicyEsoft(state)
+        state['action'] = move
+        self.policy.StateActionTimesVisted[move-1].arrayOfGrids[state['grid']-1].grid[state['x']][state['y']] += 1
+        self.stateActionArray.append(state)
+        print("State: {}, stateActionArray: {}".format(state, self.stateActionArray)) if debug else False
+        return move
+
+    def update(self,reward):
+        self.reward += reward
+        self.stateActionArray[len(self.stateActionArray)-1]['reward'] = reward
+        print("Reward: stateActionArray: {}".format(self.stateActionArray)) if debug else False
+
+        
 
     def playerStatus(self):
         return "agent Status: Reward: {},  X: {}, Y: {}, Gird: {}, MoveCount: {}".format(self.reward, self.playerX,self.playerY,self.currentGrid, self.moveCount)
@@ -31,3 +47,4 @@ class Agent:
         self.playerY = Y
         self.currentGrid = Grid
         self.moveCount = 0
+        self.stateActionArray = []
