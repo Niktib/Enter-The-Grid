@@ -48,7 +48,6 @@ class monteCarlo:
 			totalReturn += r + self.gamma * totalReturn 
 			currentValue = self.stateActionMap[s[0]][s[1]][s[2]][a][0]
 			numberOfTimesPicked = self.stateActionMap[s[0]][s[1]][s[2]][a][1]
-			self.stateMap[s[0]][s[1]][s[2]] = 0 #need the update function for state
 			#Qn = Qn + 1/n (Rt + Qn)
-			self.stateActionMap[s[0]][s[1]][s[2]][a] = currentValue + 1/numberOfTimesPicked(totalReturn - currentValue) #need the update function for action picking
+			self.stateActionMap[s[0]][s[1]][s[2]][a][0] = currentValue + 1/numberOfTimesPicked * (totalReturn - currentValue) #need the update function for action picking
 			
