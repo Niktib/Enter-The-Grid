@@ -38,7 +38,7 @@ class GridWorld:
 		#1 = North, 2 = East, 3 = South, 4 = West
 		results = self.arrayOfGrids[self.agent.currentGrid-1].makeYourMove(self.agent, self.randomMovement())
 		if (self.agent.currentGrid == self.goal['grid'] and self.agent.playerX == self.goal['x'] and self.agent.playerY == self.goal['y']):
-			self.agent.reward += 100
+			self.agent.update(100)
 			self.agent.Done = True
 			return
 		if results['atDoor']:
@@ -54,9 +54,9 @@ class GridWorld:
 			elif results['door'] == 4:
 				self.agent.playerY = int(self.arrayOfGrids[self.agent.currentGrid-1].y/2)
 				self.agent.playerX = int(self.arrayOfGrids[self.agent.currentGrid-1].x-1)
-			self.agent.reward += self.reward
+			self.agent.update(self.reward)
 		else:
-			self.agent.reward += self.reward
+			self.agent.update(self.reward)
 	
 	def randomMovement(self):
 		result = random.random()
@@ -76,6 +76,7 @@ class GridWorld:
 
 	def resetGrid(self,X,Y,Grid):
 		self.agent.resetAgent(X,Y,Grid)
+
 	def pieceItTogether(self):
 		'''
 		1. Take a grid, iterate through the list adding future grids to possible connecting doors.
@@ -151,7 +152,7 @@ class GridState:
 			outStr += "Grid #: {}, gridDoors: {}\n".format(grid.gridNumber,grid.doors)
 			for i in range(len(grid.grid)):
 				for j in range(len(grid.grid[i])):
-					outStr += str(grid.grid[i][j])
+					outStr += str(grid.grid[i][j]) + ","
 				outStr += "\n"
 			#grid.printOut(None, self.goal)
 			# Possibly make grid print out return string, and use map to put ones connected to each other in correct order
