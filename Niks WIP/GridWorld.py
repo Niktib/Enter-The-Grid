@@ -2,7 +2,7 @@ import random
 from datetime import datetime
 from TheGrid import SmallGrid
 import time
-debug = True
+debug = False
 
 class GridWorld:
 	def __init__(self, goal, vertical=5, horizontal=5, p1=0.8, p2=0.1, numOfGrids=4):
@@ -39,16 +39,15 @@ class GridWorld:
 	def agentMove(self, playerPos, move):
 		#Results= { 'atDoor' : atDoor (True or false), 'door' : Cardinal direction of door}
 		#1 = North, 2 = East, 3 = South, 4 = West
-		newGrid = playerPos[2]-1
-		results = self.arrayOfGrids[newGrid].makeYourMove(playerPos[0], playerPos[1],  move, self.randomMovement())
-		newGrid += 1
-		if (newGrid == self.goal['grid'] and results['playerX'] == self.goal['x'] and results['playerY'] == self.goal['y']):
+		oldGrid = playerPos[2]
+		results = self.arrayOfGrids[oldGrid -1].makeYourMove(playerPos[0], playerPos[1],  move, self.randomMovement())
+		newGrid = oldGrid
+		if (oldGrid == self.goal['grid'] and results['playerX'] == self.goal['x'] and results['playerY'] == self.goal['y']):
 			reward = 100
 			self.finished = True
-			return [results['playerX'], results['playerY'], newGrid, reward]
+			return [results['playerX'], results['playerY'], oldGrid, reward]
 		if results['atDoor']:
-			print("At Door: Grid: {}, Direction: {}".format(newGrid, results['door']))
-			newGrid = self.map[newGrid+1][results['door']]
+			newGrid = self.map[oldGrid][results['door']]
 			if results['door'] == 1:
 				results['playerY'] = self.arrayOfGrids[newGrid-1].y-1
 			elif results['door'] == 2:
@@ -117,6 +116,6 @@ class GridWorld:
 			if grid.gridNumber == playerPos[2]:
 				print("Grid #: {}, gridDoors: {}".format(grid.gridNumber,grid.doors)) if debug else False #debug
 				grid.printOut(playerPos, self.goal)
-				time.sleep(1) if animate else False
+				time.sleep(0.15) if animate else False
 				# Possibly make grid print out return string, and use map to put ones connected to each other in correct order
 				# then use new line to make next line of grid lower and append string 

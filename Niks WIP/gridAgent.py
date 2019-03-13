@@ -37,9 +37,15 @@ class Agent:
 
 	def playerStatus(self):
 		return "agent Status: Reward: {},  X: {}, Y: {}, Grid: {}".format(self.reward, self.playerX,self.playerY,self.currentGrid)
-
-	def policyDetails(self):
+		
+	def sarsaUpdate(self):
+		self.policy.updateStates(self.stateActionArray, self.agentState())
+		self.stateActionArray = []
+		
+	def mcUpdate(self):
 		self.policy.updateStates(self.stateActionArray)
+	
+	def policyRetrieval(self):
 		return self.policy
 
 	def playerStateSetUp(self, gridDimensions):
@@ -56,8 +62,9 @@ class Agent:
 				individualActionGrid[j] = [None] * gridDimensions[i][1]
 				for k in range(gridDimensions[i][1]):
 					#All possible Actions
-					individualActionGrid[j][k] = [[0,0]] * self.numOfActions
+					individualActionGrid[j][k] = [0] * self.numOfActions
 			#Add it to the total stateMap
 			stateActionMap.append(individualActionGrid)
 			stateMap.append(individualGrid)
+			
 		self.policy.setUpState(stateActionMap, stateMap)

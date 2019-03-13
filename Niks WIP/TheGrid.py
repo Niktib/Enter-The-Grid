@@ -1,4 +1,4 @@
-debug = True
+debug = False
 
 class SmallGrid:
 	def __init__(self, vertical=5, horizontal=5, doors =[], gridNumber=0):
@@ -23,14 +23,6 @@ class SmallGrid:
 					playerX += -1
 				if probability == 4:
 					playerX += 1
-		#down
-		elif move == 3:
-			if probability != 2:
-				playerY += 1
-				if probability == 3:
-					playerX += 1
-				if probability == 4:
-					playerX += -1
 		#Right
 		elif move == 2:
 			if probability != 2:
@@ -39,7 +31,15 @@ class SmallGrid:
 					playerX += -1
 				if probability == 4:
 					playerX += 1
-		#Down
+		#down
+		elif move == 3:
+			if probability != 2:
+				playerY += 1
+				if probability == 3:
+					playerX += 1
+				if probability == 4:
+					playerX += -1
+		#left
 		elif move == 4:
 			if probability != 2:
 				playerX += -1
@@ -70,7 +70,7 @@ class SmallGrid:
 			atDoor = True
 			door = 4
 
-		print("end errorCheck atDoor: {}, door: {}, (conditions: {}), self.door: {}, self.gridNum: {}".format(atDoor,door,(2 in self.doors),self.doors, self.gridNumber )) if debug else False #debug
+		print("end errorCheck atDoor: {}, door: {}, self.door: {}, self.gridNum: {}".format(atDoor,door,self.doors, self.gridNumber )) if debug else False #debug
 		#If they go off, reset the incorrect value.
 		if playerX < 0: playerX = 0
 		if playerX > self.x-1: playerX = self.x-1
@@ -101,7 +101,7 @@ class SmallGrid:
 					elif goal['grid'] == self.gridNumber and goal['x'] == j and goal['y'] == i:
 						pStr = pStr + "| " + "G" + " "
 					else:
-						pStr = pStr + "| " + str(self.grid[i][j]) + " "
+						pStr = pStr + "| " + ' ' + " "
 				pStr = pStr + "\n\t"
 				for j in range(self.y):
 					pStr = pStr + "|___"
@@ -121,14 +121,14 @@ class SmallGrid:
 						elif goal['grid'] == self.gridNumber and goal['x'] == j and goal['y'] == i:
 							pStr = pStr + "  " + "G" + " "
 						else:
-							pStr = pStr + "  "+ str(self.grid[i][j]) + " "
+							pStr = pStr + "  "+ ' ' + " "
 					else:
 						if playerPos[0] == j and playerPos[1] == i and self.gridNumber == playerPos[2]:
 							pStr = pStr + "| " + "A" + " "
 						elif goal['grid'] == self.gridNumber and goal['x'] == j and goal['y'] == i:
 							pStr = pStr + "| " + "G" + " "
 						else:
-							pStr = pStr + "| " + str(self.grid[i][j]) + " "
+							pStr = pStr + "| " + ' ' + " "
 				pStr = pStr + "|\n\t"
 				for j in range(self.y):
 					if j == 0:
@@ -147,7 +147,7 @@ class SmallGrid:
 					elif goal['grid'] == self.gridNumber and goal['x'] == j and goal['y'] == i:
 						pStr = pStr + "| " + "G" + " "
 					else:
-						pStr = pStr + "| " + str(self.grid[i][j]) + " "
+						pStr = pStr + "| " + ' ' + " "
 				pStr = pStr + "|\n\t"
 				# to open but door at the bottom
 				for j in range(self.y):
