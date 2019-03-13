@@ -2,7 +2,7 @@ import random
 from datetime import datetime
 from TheGrid import SmallGrid
 import time
-debug = True
+debug = False
 
 class GridWorld:
 	def __init__(self, start, goal,agent=None, vertical=5, horizontal=5, p1=0.8, p2=0.1, numOfGrids=4):
@@ -74,8 +74,8 @@ class GridWorld:
 			#Clockwise of choice
 			return 4
 
-	def resetGrid(self,X,Y,Grid):
-		self.agent.resetAgent(X,Y,Grid)
+	def resetGrid(self):
+		self.agent.resetAgent(self.startPoint['x'],self.startPoint['y'],self.startPoint['grid'])
 
 	def pieceItTogether(self):
 		'''
@@ -107,14 +107,14 @@ class GridWorld:
 		self.map = mapBasic
 		print("Basic Map: {}".format(self.map)) if debug else False #debug variable at top of file 
 	
-	def printOut(self, animate=True):
+	def printOut(self, animate=False):
 		print("Grid World Printout: {}".format(self.arrayOfGrids))	
 		for grid in self.arrayOfGrids:
 			#for now only print agent current grid
 			if grid.gridNumber == self.agent.currentGrid:
 				print("Grid #: {}, gridDoors: {}".format(grid.gridNumber,grid.doors)) if debug else False #debug
 				grid.printOut(self.agent, self.goal)
-				time.sleep(0.2) if animate else False
+				time.sleep(0.15) if animate else False
 				# Possibly make grid print out return string, and use map to put ones connected to each other in correct order
 				# then use new line to make next line of grid lower and append string 
 	

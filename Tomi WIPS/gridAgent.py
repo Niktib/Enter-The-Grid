@@ -20,12 +20,13 @@ class Agent:
         self.Done = False
         self.moveCount = 0
         self.stateActionArray = []
+        gridWorld.insertAgent(self)
 
     def move(self):
-        state = {'grid' : self.currentGrid, 'x' : self.playerX, 'y' : self.playerY}
-        self.moveCount += 1 
-        move = self.policy.onPolicyEsoft(state)
-        state['action'] = move
+        state = {'grid' : self.currentGrid, 'x' : self.playerX, 'y' : self.playerY} #store state of agent to be logged
+        self.moveCount += 1 #increase move count, do I need this?
+        move = self.policy.onPolicyEsoft(state) #follow policy using state
+        state['action'] = move 
         self.policy.StateActionTimesVisted[move-1].arrayOfGrids[state['grid']-1].grid[state['x']][state['y']] += 1
         self.stateActionArray.append(state)
         print("State: {}, stateActionArray: {}".format(state, self.stateActionArray)) if debug else False

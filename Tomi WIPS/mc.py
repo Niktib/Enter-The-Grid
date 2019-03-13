@@ -2,7 +2,7 @@ import random
 import GridWorld
 import copy
 
-debug = True
+debug = False
 class monteCarlo:
      
      def __init__(self, valueState, policyState,epislon=0.1, gamma=0.9, numOfActions=4):
