@@ -5,7 +5,7 @@ import time
 debug = True
 
 class GridWorld:
-	def __init__(self, start, goal, vertical=5, horizontal=5, p1=0.8, p2=0.1, numOfGrids=4):
+	def __init__(self, goal, vertical=5, horizontal=5, p1=0.8, p2=0.1, numOfGrids=4):
 		#Initialize should create the gridworld environment and accept an array of terminal states.
 		random.seed(datetime.now())
 		self.p1 = p1
@@ -13,11 +13,11 @@ class GridWorld:
 		self.reward = -1
 		self.map = dict()
 		self.arrayOfGrids = []
-		self.startPoint = start
 		self.goal = goal
 		self.finished = False
 		self.vertical = vertical
 		self.horizontal = horizontal
+		self.numOfGrids = numOfGrids
 		for i in range(1,numOfGrids):
 			self.arrayOfGrids.append(SmallGrid(vertical,horizontal,[i, i+1], i))
 		self.arrayOfGrids.append(SmallGrid(vertical,horizontal,[4, 1], 4))
@@ -32,35 +32,37 @@ class GridWorld:
 	def understandingState(self):
 		#returns an array with the dimensions for each grid in the grids numbered slot
 		gridMap = []
-		for i in range(1,numOfGrids):
+		for i in range(0,self.numOfGrids):
 			gridMap.append(self.arrayOfGrids[i].dimensionsOfGrid())
 		return gridMap
 
 	def agentMove(self, playerPos, move):
 		#Results= { 'atDoor' : atDoor (True or false), 'door' : Cardinal direction of door}
 		#1 = North, 2 = East, 3 = South, 4 = West
-		results = self.arrayOfGrids[playerPos[2]-1].makeYourMove(playerPos[0], playerPos[1],  move, randomMovement)
-		if (playerPos[2] == self.goal['grid'] and playerPos[0] == self.goal['x'] and playerPos[1] == self.goal['y']):
+		newGrid = playerPos[2]-1
+		results = self.arrayOfGrids[newGrid].makeYourMove(playerPos[0], playerPos[1],  move, self.randomMovement())
+		newGrid += 1
+		if (newGrid == self.goal['grid'] and results['playerX'] == self.goal['x'] and results['playerY'] == self.goal['y']):
 			reward = 100
 			self.finished = True
-			return [results['playerPos[0]'], results['playerPos[1]'], reward]
+			return [results['playerX'], results['playerY'], newGrid, reward]
 		if results['atDoor']:
-			print("At Door: Grid: {}, Direction: {}".format(playerPos[2],results['door']))
-			playerPos[2] = self.map[playerPos[2]][results['door']]
+			print("At Door: Grid: {}, Direction: {}".format(newGrid, results['door']))
+			newGrid = self.map[newGrid+1][results['door']]
 			if results['door'] == 1:
-				playerPos[1] = self.arrayOfGrids[playerPos[2]-1].y-1
+				results['playerY'] = self.arrayOfGrids[newGrid-1].y-1
 			elif results['door'] == 2:
-				playerPos[0] = 0
+				results['playerX'] = 0
 			elif results['door'] == 3:
-				playerPos[0] = int(self.arrayOfGrids[playerPos[2]-1].x/2)
-				playerPos[1] = 0
+				results['playerX'] = int(self.arrayOfGrids[newGrid-1].x/2)
+				results['playerY'] = 0
 			elif results['door'] == 4:
-				playerPos[1] = int(self.arrayOfGridsplayerPos[2]-1].y/2)
-				playerPos[0] = int(self.arrayOfGrids[playerPos[2]-1].x-1)
+				results['playerY'] = int(self.arrayOfGrids[newGrid-1].y/2)
+				results['playerX'] = int(self.arrayOfGrids[newGrid-1].x-1)
 			reward = self.reward
 		else:
 			reward = self.reward
-		return [results['playerPos[0]'], results['playerPos[1]'], reward]
+		return [results['playerX'], results['playerY'], newGrid, reward]
 			
 	def randomMovement(self):
 		result = random.random()
@@ -114,7 +116,7 @@ class GridWorld:
 			#for now only print agent current grid
 			if grid.gridNumber == playerPos[2]:
 				print("Grid #: {}, gridDoors: {}".format(grid.gridNumber,grid.doors)) if debug else False #debug
-				grid.printOut(playerPos[0], playerPos[1], playerPos[2] self.goal)
+				grid.printOut(playerPos, self.goal)
 				time.sleep(1) if animate else False
 				# Possibly make grid print out return string, and use map to put ones connected to each other in correct order
 				# then use new line to make next line of grid lower and append string 

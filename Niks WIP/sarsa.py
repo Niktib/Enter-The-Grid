@@ -1,7 +1,9 @@
 class sarsa:
      
-     def __init__(self):
-         pass
+	def __init__(self, epsilon = 0.1, gamma = 0.9, alpha = 0.1):
+		self.epsilon = epsilon
+		self.gamma = gamma
+		self.alpha = alpha
 		
 	def numberOfActions(self, numOfActions=4):
 		self.numOfActions = numOfActions
@@ -11,7 +13,7 @@ class sarsa:
 		self.stateActionMap = blankStateActionArray
 		
 	def decision(self, state):
-		if random.random() < epsilon:
+		if random.random() < self.epsilon:
 			return self.explore(state)
 		else:
 			return self.exploit(state)

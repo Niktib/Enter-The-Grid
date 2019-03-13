@@ -49,7 +49,7 @@ class SmallGrid:
 					playerY += -1
 		return self.errorAndDoorCheck(playerX, playerY)
 
-	def dimensionsOfGrid(self)
+	def dimensionsOfGrid(self):
 		return [self.x, self.y]
 		
 	def errorAndDoorCheck(self, playerX, playerY):
