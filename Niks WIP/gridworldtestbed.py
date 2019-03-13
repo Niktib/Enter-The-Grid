@@ -36,7 +36,9 @@ class testbed:
 			agent.playerStateSetUp(self.gridWorld.understandingState())
 			for ep in range(1,episodes+1):
 				while True:
+					print("Iter: {}, Ep: {}, {}".format(iter, ep, agent.playerStatus()))
 					self.gridWorld.printOut(agent.agentState(), True)
+
 					agent.results(self.gridWorld.agentMove(agent.agentState(), agent.move()))
 					if self.sarsaLearning or self.qLearning: agent.sarsaUpdate()
 					print("Iter: {}, Ep: {}, {}".format(iter, ep, agent.playerStatus())) if debug else False#debug

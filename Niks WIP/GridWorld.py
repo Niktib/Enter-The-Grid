@@ -110,7 +110,6 @@ class GridWorld:
 		print("Basic Map: {}".format(self.map)) if debug else False #debug variable at top of file 
 	
 	def printOut(self, playerPos, animate=False):
-		print("Grid World Printout: {}".format(self.arrayOfGrids))	
 		for grid in self.arrayOfGrids:
 			#for now only print agent current grid
 			if grid.gridNumber == playerPos[2]:
