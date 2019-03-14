@@ -5,6 +5,7 @@ import mc
 import q
 import sarsa
 import os
+import time as time
 
 debug = False
 class testbed:
@@ -31,10 +32,14 @@ class testbed:
 		for i in range(episodes - len(agentArray) +1): agentArray.append([random.randint(0,4),random.randint(0,4),random.randint(0,len(self.gridWorld.arrayOfGrids)-1)+1])
 		
 		for iter in range(1, iterations+1):
+			
+			iterationStart = time.time()
 			writeUp = ""
 			agent = gridAgent.Agent(2,3,3,self.policy)
 			agent.playerStateSetUp(self.gridWorld.understandingState())
 			for ep in range(1,episodes+1):
+				episodeStart = time.time()
+				episodeAverageTime = 0
 				while True:
 					if printInfo:
 						print("Iter: {}, Ep: {}, {}".format(iter, ep, agent.playerStatus()))
@@ -49,14 +54,18 @@ class testbed:
 						self.gridWorld.finished = False
 						break
 				#At end of episode, update policy and grab it from agent to give to new agent
+				episodeEnd = time.time()
+				episodeAverageTime = episodeAverageTime + 1/ep * ( (episodeEnd - episodeStart) - episodeAverageTime)
 				if self.mcLearning: agent.mcUpdate()
 				
 				self.policy = agent.policyRetrieval()
-				writeUp += "Episode {} ".format(ep) + agent.agentInformation()
+				writeUp += "Episode {} ".format(ep) + agent.agentInformation() + " Time Taken: {} \n".format(episodeEnd - episodeStart)
 				#agent = gridAgent.Agent(1,2,3,self.policy)
 				agent = gridAgent.Agent(agentArray[ep][0],agentArray[ep][1],agentArray[ep][2] ,self.policy)
-		print("The total # of successful runs: {}".format(totalSuccess))
+			iterationEnd = time.time()
+			
+		print("Last Iterations Time is: {} \nAverage Episode time is: {} with a total # of successful runs: {}".format(iterationEnd - iterationStart, episodeAverageTime, totalSuccess))
 		self.policy.printOut()
-		f = open(os.path.dirname(os.path.realpath(__file__)) + "\TestData.txt","w")
+		f = open(os.path.dirname(os.path.realpath(__file__)) + "\Algorithm {} Epsilon={} Alpha={} Gamma={}.txt".format(self.policy.name, self.policy.epsilon, self.policy.alpha, self.policy.gamma),"w")
 		f.write(writeUp)
 		f.close()

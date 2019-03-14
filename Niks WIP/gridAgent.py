@@ -52,7 +52,7 @@ class Agent:
 
 		
 	def agentInformation(self):
-		return "Agent: Reward: {}, Moves: {} \n".format(self.reward, self.moves)
+		return "Agent: Reward: {}, Moves: {} ".format(self.reward, self.moves)
 	def playerStateSetUp(self, gridDimensions):
 	#Recieves GridDimensions from GridWorld
 		stateMap = []

@@ -6,6 +6,7 @@ class qlearning:
 		self.epsilon = epsilon
 		self.gamma = gamma
 		self.alpha = alpha
+		self.name = "Q-Learning"
 		
 	def numberOfActions(self, numOfActions=4):
 		self.numOfActions = numOfActions

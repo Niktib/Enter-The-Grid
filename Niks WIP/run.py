@@ -43,3 +43,4 @@ if choice == "Y" or choice =="y":
 	
 test = GTB.testbed(mc,sa,qLearning,p1, p2, epsilon, gamma, alpha)
 test.run(iterations, episodes, steps)
+input("Press Enter key to exit")

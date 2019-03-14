@@ -6,6 +6,7 @@ class monteCarlo:
 		self.epsilon = epsilon
 		self.gamma = gamma
 		self.alpha =  alpha
+		self.name = "Monte Carlo"
 		
 	def numberOfActions(self, numOfActions=4):
 		self.numOfActions = numOfActions

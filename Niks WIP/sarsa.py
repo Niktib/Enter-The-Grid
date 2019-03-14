@@ -6,6 +6,7 @@ class sarsaLearning:
 		self.epsilon = epsilon
 		self.gamma = gamma
 		self.alpha = alpha
+		self.name = "SARSA"
 		
 	def numberOfActions(self, numOfActions=4):
 		self.numOfActions = numOfActions
