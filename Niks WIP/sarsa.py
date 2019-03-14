@@ -54,7 +54,7 @@ class sarsaLearning:
 		
 	def printOut(self):
 		for i in range(len(self.stateActionMap)):
-			print("Grid #{}:".format(i+1))
+			#print("Grid #{}:".format(i+1))
 			for x in range(len(self.stateActionMap[i])):
 				for y in range(len(self.stateActionMap[i][x])):
 					self.stateMap[i][x][y] = self.policyPrint(self.stateActionMap[i][x][y])

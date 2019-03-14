@@ -55,7 +55,7 @@ class monteCarlo:
 	
 	def printOut(self):
 		for i in range(len(self.stateActionMap)):
-			print("Grid #{}:".format(i+1))
+			#print("Grid #{}:".format(i+1))
 			for x in range(len(self.stateActionMap[i])):
 				for y in range(len(self.stateActionMap[i][x])):
 					self.stateMap[i][x][y] = self.policyPrint(self.stateActionMap[i][x][y])
@@ -66,7 +66,7 @@ class monteCarlo:
 		
 	def policyPrint(self, arrayOfActions):
 		action = arrayOfActions.index(max(arrayOfActions))
-		print("State-Action value: {}".format(arrayOfActions))
+		#print("State-Action value: {}".format(arrayOfActions))
 		if sum(arrayOfActions) == 0:
 			return 'N'
 		elif action == 0:
@@ -93,10 +93,7 @@ class monteCarlo:
 					pStr = pStr + "|   "
 				pStr = pStr + "|\n\t"
 				for j in range(y):
-					if j == 4 and i == 0:
-						pStr = pStr + "| " + str("G") + " "
-					else:
-						pStr = pStr + "| " + str(gridArray[i][j]) + " "
+					pStr = pStr + "| " + str(gridArray[i][j]) + " "
 				pStr = pStr + "|\n\t"
 				for j in range(y):
 					pStr = pStr + "|___"

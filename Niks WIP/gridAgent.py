@@ -11,6 +11,7 @@ class Agent:
 		self.currentGrid = grid
 		self.reward = 0
 		self.numOfActions = 4
+		self.moves = 0
 
 		self.stateActionArray = []
 		self.policy = policy
@@ -20,6 +21,7 @@ class Agent:
 		state = [self.currentGrid, self.playerX, self.playerY]
 		action = self.policy.decision(state)
 		self.stateActionArray.append([state, action])
+		self.moves += 1
 		return action
 
 	def results(self, resultsArray):
@@ -48,6 +50,9 @@ class Agent:
 	def policyRetrieval(self):
 		return self.policy
 
+		
+	def agentInformation(self):
+		return "Agent: Reward: {}, Moves: {} \n".format(self.reward, self.moves)
 	def playerStateSetUp(self, gridDimensions):
 	#Recieves GridDimensions from GridWorld
 		stateMap = []
