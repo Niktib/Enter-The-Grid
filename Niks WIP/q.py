@@ -1,4 +1,8 @@
+# Name, Student Number
+# Oluwatomilayo Adegbite, 500569283
+# Nikolas Maier, 500461990
 import random
+import gridworldtestbed as GTB
 
 class qlearning:
      
@@ -100,6 +104,34 @@ class qlearning:
 				pStr = pStr + "|\n"
 		print(pStr)
 		
+
 		
-		
+print("The default settings are: \n\tp1 = 0.8\n\tp2 = 0.1")
+p1 = 0.8
+p2 = 0.1
+choice = input("Do you want to change these defaults? Y/N\n")
+if choice == "Y" or choice =="y":
+	p1 = double(input("p1 = "))
+	p2 = double(input("p2 = "))
+choice = input("The defaults for \n\tgamma = 0.9\n\talpha = 0.1\n\tepsilon = 0.1 \ndo you want to change them?\n Y/N\n")
+gamma = 0.9
+alpha = 0.1
+epsilon = 0.1
+if choice == "Y" or choice =="y":
+	gamma = double(input("gamma = "))
+	alpha = double(input("alpha = "))
+	epsilon = double(input("epsilon = "))
+print("Number of Iterations is set to 1 and episodes equals 200 with maxiumum steps per episode set to 1000")
+iterations = 1
+episodes = 200
+steps = 1000
+choice = input("Do you want to change these? Y/N\n")
+if choice == "Y" or choice =="y":
+	iterations = input("Iterations: ")
+	episodes = input("Episodes: ")
+	steps = input("Maximum steps: ")
+	
+test = GTB.testbed(False,False,True,p1, p2, epsilon, gamma, alpha)
+test.run(iterations, episodes, steps)
+input("Press Enter key to exit")
 		

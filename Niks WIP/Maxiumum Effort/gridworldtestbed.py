@@ -19,6 +19,15 @@ class testbed:
 		self.gridWorld = GridWorld.GridWorld({"grid": 3, "x" : 4 , "y" : 0})
 		self.gridWorld.pieceItTogether()
 		
+		self.mcLearning = mcLearning
+		self.sarsaLearning = sarsaLearning
+		self.qLearning = qLearning
+		#Epsilon, Gamma, Alpha
+		if self.mcLearning: self.policy = mc.monteCarlo(epsilon, gamma, alpha)
+		if self.sarsaLearning: self.policy = sarsa.sarsaLearning(epsilon, gamma, alpha)
+		if self.qLearning: self.policy = q.qlearning(epsilon, gamma, alpha)
+		
+		
 	def run(self, iterations, episodes, steps, printInfo = False):
 		totalSuccess = 0
 		
