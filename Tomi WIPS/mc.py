@@ -53,7 +53,7 @@ class monteCarlo:
           statesTraversed.reverse()
           totalReturn = 0
           for step in statesTraversed:
-               totalReturn += step['reward'] + self.gamma * totalReturn 
+               totalReturn = step['reward'] + self.gamma * totalReturn 
                currentValue = self.StateAction[step['action'] - 1].arrayOfGrids[step['grid']-1].grid[step['x']][step['y']]
                numberOfTimesPicked = self.StateActionTimesVisted[step['action'] - 1].arrayOfGrids[step['grid']-1].grid[step['x']][step['y']]
                #self.stateMap[s[0]][s[1]][s[2]] = 0 #need the update function for state

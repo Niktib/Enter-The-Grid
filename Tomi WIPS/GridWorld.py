@@ -107,7 +107,7 @@ class GridWorld:
 		self.map = mapBasic
 		print("Basic Map: {}".format(self.map)) if debug else False #debug variable at top of file 
 	
-	def printOut(self, animate=False):
+	def printOut(self, animate=True):
 		print("Grid World Printout: {}".format(self.arrayOfGrids))	
 		for grid in self.arrayOfGrids:
 			#for now only print agent current grid

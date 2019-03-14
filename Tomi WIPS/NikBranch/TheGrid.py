@@ -1,6 +1,4 @@
-import gridAgent
-
-debug = True
+debug = False
 
 class SmallGrid:
 	def __init__(self, vertical=5, horizontal=5, doors =[], gridNumber=0):
@@ -13,77 +11,75 @@ class SmallGrid:
 		self.grid = [0] * self.x
 		for i in range(self.x):
 			self.grid[i] = [0] * self.y
-			
-	
-	def makeYourMove(self, agent, probability):
-		move = agent.move()
-		print("pre agent Move: {}, {}".format(move,agent.playerStatus()))
+		
+	def makeYourMove(self, playerX, playerY, move, probability):
 		#1 = North, 2 = East, 3 = South, 4 = West
 
 		#up
-		if move == agent.North:
+		if move == 1:
 			if probability != 2:
-				agent.playerY += -1
+				playerY += -1
 				if probability == 3:
-					agent.playerX += -1
+					playerX += -1
 				if probability == 4:
-					agent.playerX += 1
-		#down
-		elif move == agent.South:
-			if probability != 2:
-				agent.playerY += 1
-				if probability == 3:
-					agent.playerX += 1
-				if probability == 4:
-					agent.playerX += -1
+					playerX += 1
 		#Right
-		elif move == agent.East:
+		elif move == 2:
 			if probability != 2:
-				agent.playerX += 1
+				playerX += 1
 				if probability == 3:	
-					agent.playerX += -1
+					playerX += -1
 				if probability == 4:
-					agent.playerX += 1
-		#Down
-		elif move == agent.West:
+					playerX += 1
+		#down
+		elif move == 3:
 			if probability != 2:
-				agent.playerX += -1
+				playerY += 1
 				if probability == 3:
-					agent.playerY += 1
+					playerX += 1
 				if probability == 4:
-					agent.playerY += -1
-		print("post agent Move: {}, {}".format(move,agent.playerStatus()))
-		return self.errorAndDoorCheck(agent)
+					playerX += -1
+		#left
+		elif move == 4:
+			if probability != 2:
+				playerX += -1
+				if probability == 3:
+					playerY += 1
+				if probability == 4:
+					playerY += -1
+		return self.errorAndDoorCheck(playerX, playerY)
 
-	def errorAndDoorCheck(self, agent):
+	def dimensionsOfGrid(self):
+		return [self.x, self.y]
+		
+	def errorAndDoorCheck(self, playerX, playerY):
 		#1 = North, 2 = East, 3 = South, 4 = West
 		door = 0
 		atDoor = False
 		#Did the agent walk through a door? HAs to be in the middle of the array and past the door
-		print("Door and Error Check, {}, round(self.x): {}".format(agent.playerStatus(),round(self.x))) if debug else False #debug
-		if (1 in self.doors) and (agent.playerY < 0) and (agent.playerX == round(self.x/2)):	
+		if (1 in self.doors) and (playerY < 0) and (playerX == round(self.x/2)):	
 			atDoor = True
 			door = 1
-		elif 2 in self.doors and agent.playerX == self.x and agent.playerY  == round(self.x/2):	
+		elif 2 in self.doors and playerX == self.x and playerY  == round(self.x/2):	
 			atDoor = True
 			door = 2
-		elif 3 in self.doors and agent.playerX == round(self.x/2) and agent.playerY  == self.y:	
+		elif 3 in self.doors and playerX == round(self.x/2) and playerY  == self.y:	
 			atDoor = True
 			door = 3
-		elif 4 in self.doors and agent.playerX < 0 and agent.playerY  == round(self.y/2):	
+		elif 4 in self.doors and playerX < 0 and playerY  == round(self.y/2):	
 			atDoor = True
 			door = 4
 
-		print("end errorCheck atDoor: {}, door: {}, (conditions: {}), self.door: {}, self.gridNum: {}".format(atDoor,door,(2 in self.doors),self.doors, self.gridNumber )) if debug else False #debug
+		print("end errorCheck atDoor: {}, door: {}, self.door: {}, self.gridNum: {}".format(atDoor,door,self.doors, self.gridNumber )) if debug else False #debug
 		#If they go off, reset the incorrect value.
-		if agent.playerX < 0: agent.playerX = 0
-		if agent.playerX > self.x-1: agent.playerX = self.x-1
-		if agent.playerY < 0: agent.playerY = 0
-		if agent.playerY > self.y-1: agent.playerY = self.y-1
-		return {'atDoor' : atDoor, 'door' : door}
+		if playerX < 0: playerX = 0
+		if playerX > self.x-1: playerX = self.x-1
+		if playerY < 0: playerY = 0
+		if playerY > self.y-1: playerY = self.y-1
+		return {'atDoor' : atDoor, 'door' : door, 'playerX' : playerX, 'playerY' : playerY}
 
 
-	def printOut(self, agent, goal):
+	def printOut(self, playerPos, goal):
 		pStr = "\t"
 		for i in range(self.x):
 			print("printOut i: {} , self.x/2: {}, self.x: {}".format(i,self.x/2,self.x)) if False else False
@@ -100,7 +96,7 @@ class SmallGrid:
 					pStr = pStr + "|   "
 				pStr = pStr + "\n\t"
 				for j in range(self.y):
-					if agent.playerX == j and agent.playerY == i and self.gridNumber == agent.currentGrid:
+					if playerPos[0] == j and playerPos[1] == i and self.gridNumber == playerPos[2]:
 						pStr = pStr + "| " + "A" + " "
 					elif goal['grid'] == self.gridNumber and goal['x'] == j and goal['y'] == i:
 						pStr = pStr + "| " + "G" + " "
@@ -120,14 +116,14 @@ class SmallGrid:
 				pStr = pStr + "|\n\t"
 				for j in range(self.y):
 					if j == 0:
-						if agent.playerX == j and agent.playerY == i and self.gridNumber == agent.currentGrid:
+						if playerPos[0] == j and playerPos[1] == i and self.gridNumber == playerPos[2]:
 							pStr = pStr + "  " + "A" + " "
 						elif goal['grid'] == self.gridNumber and goal['x'] == j and goal['y'] == i:
 							pStr = pStr + "  " + "G" + " "
 						else:
 							pStr = pStr + "  "+ ' ' + " "
 					else:
-						if agent.playerX == j and agent.playerY == i and self.gridNumber == agent.currentGrid:
+						if playerPos[0] == j and playerPos[1] == i and self.gridNumber == playerPos[2]:
 							pStr = pStr + "| " + "A" + " "
 						elif goal['grid'] == self.gridNumber and goal['x'] == j and goal['y'] == i:
 							pStr = pStr + "| " + "G" + " "
@@ -146,7 +142,7 @@ class SmallGrid:
 					pStr = pStr + "|   "
 				pStr = pStr + "|\n\t"
 				for j in range(self.y):
-					if agent.playerX == j and agent.playerY == i and self.gridNumber == agent.currentGrid:
+					if playerPos[0] == j and playerPos[1] == i and self.gridNumber == playerPos[2]:
 						pStr = pStr + "| " + "A" + " "
 					elif goal['grid'] == self.gridNumber and goal['x'] == j and goal['y'] == i:
 						pStr = pStr + "| " + "G" + " "
