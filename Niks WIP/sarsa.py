@@ -2,7 +2,6 @@
 # Oluwatomilayo Adegbite, 500569283
 # Nikolas Maier, 500461990
 import random
-import gridworldtestbed as GTB
 
 class sarsaLearning:
      
@@ -66,10 +65,11 @@ class sarsaLearning:
 		
 		for i in range(len(self.stateMap)):
 			print("Grid #{}:".format(i+1))
-			self.printGrid(self.stateMap[i])
+			self.printGrid(self.stateMap[i], i)
 		
 	def policyPrint(self, arrayOfActions):
 		action = arrayOfActions.index(max(arrayOfActions))
+		#print("State-Action value: {}".format(arrayOfActions))
 		if sum(arrayOfActions) == 0:
 			return 'N'
 		elif action == 0:
@@ -82,7 +82,7 @@ class sarsaLearning:
 			return '<'
 		else:
 			return '0'
-	def printGrid(self, gridArray):
+	def printGrid(self, gridArray, gridNum):
 		pStr = "\t"
 		x = len(gridArray)
 		y = len(gridArray[0])
@@ -96,40 +96,12 @@ class sarsaLearning:
 					pStr = pStr + "|   "
 				pStr = pStr + "|\n\t"
 				for j in range(y):
-					pStr = pStr + "| " + str(gridArray[i][j]) + " "
+					if j == 4 and i == 0 and gridNum == 2:
+						pStr = pStr + "| " + str('G') + " "
+					else:
+						pStr = pStr + "| " + str(gridArray[i][j]) + " "
 				pStr = pStr + "|\n\t"
 				for j in range(y):
 					pStr = pStr + "|___"
 				pStr = pStr + "|\n"
 		print(pStr)
-		
-		
-print("The default settings are: \n\tp1 = 0.8\n\tp2 = 0.1")
-p1 = 0.8
-p2 = 0.1
-choice = input("Do you want to change these defaults? Y/N\n")
-if choice == "Y" or choice =="y":
-	p1 = double(input("p1 = "))
-	p2 = double(input("p2 = "))
-choice = input("The defaults for \n\tgamma = 0.9\n\talpha = 0.1\n\tepsilon = 0.1 \ndo you want to change them?\n Y/N\n")
-gamma = 0.9
-alpha = 0.1
-epsilon = 0.1
-if choice == "Y" or choice =="y":
-	gamma = double(input("gamma = "))
-	alpha = double(input("alpha = "))
-	epsilon = double(input("epsilon = "))
-print("Number of Iterations is set to 1 and episodes equals 200 with maxiumum steps per episode set to 1000")
-iterations = 1
-episodes = 200
-steps = 1000
-choice = input("Do you want to change these? Y/N\n")
-if choice == "Y" or choice =="y":
-	iterations = input("Iterations: ")
-	episodes = input("Episodes: ")
-	steps = input("Maximum steps: ")
-	
-test = GTB.testbed(False,True,False,p1, p2, epsilon, gamma, alpha)
-test.run(iterations, episodes, steps)
-input("Press Enter key to exit")	
-		

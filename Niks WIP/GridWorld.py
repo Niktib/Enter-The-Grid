@@ -112,12 +112,11 @@ class GridWorld:
 		self.map = mapBasic
 		print("Basic Map: {}".format(self.map)) if debug else False #debug variable at top of file 
 	
-	def printOut(self, playerPos, animate=False):
+	def printOut(self, playerPos):
 		for grid in self.arrayOfGrids:
 			#for now only print agent current grid
 			if grid.gridNumber == playerPos[2]:
 				print("Grid #: {}, gridDoors: {}".format(grid.gridNumber,grid.doors)) if debug else False #debug
 				grid.printOut(playerPos, self.goal)
-				time.sleep(0.15) if animate else False
 				# Possibly make grid print out return string, and use map to put ones connected to each other in correct order
 				# then use new line to make next line of grid lower and append string 
