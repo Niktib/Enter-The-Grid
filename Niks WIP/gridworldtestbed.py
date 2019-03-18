@@ -19,6 +19,15 @@ class testbed:
 		self.gridWorld = GridWorld.GridWorld({"grid": 3, "x" : 4 , "y" : 0})
 		self.gridWorld.pieceItTogether()
 		
+		self.mcLearning = mcLearning
+		self.sarsaLearning = sarsaLearning
+		self.qLearning = qLearning
+		#Epsilon, Gamma, Alpha
+		if self.mcLearning: self.policy = mc.monteCarlo(epsilon, gamma, alpha)
+		if self.sarsaLearning: self.policy = sarsa.sarsaLearning(epsilon, gamma, alpha)
+		if self.qLearning: self.policy = q.qlearning(epsilon, gamma, alpha)
+		
+		
 	def run(self, iterations, episodes, steps, printInfo = False):
 		totalSuccess = 0
 		
@@ -36,8 +45,9 @@ class testbed:
 				episodeAverageTime = 0
 				while True:
 					if printInfo:
+						time.sleep(0.05)
 						print("Iter: {}, Ep: {}, {}".format(iter, ep, agent.playerStatus()))
-						self.gridWorld.printOut(agent.agentState(), True)
+						self.gridWorld.printOut(agent.agentState())
 					agent.results(self.gridWorld.agentMove(agent.agentState(), agent.move()))
 					if self.sarsaLearning or self.qLearning: agent.sarsaUpdate()
 					print("Iter: {}, Ep: {}, {}".format(iter, ep, agent.playerStatus())) if debug else False#debug
@@ -54,12 +64,13 @@ class testbed:
 				
 				self.policy = agent.policyRetrieval()
 				writeUp += "Episode {} ".format(ep) + agent.agentInformation() + " Time Taken: {} \n".format(episodeEnd - episodeStart)
-				#agent = gridAgent.Agent(1,2,3,self.policy)
-				agent = gridAgent.Agent(agentArray[ep][0],agentArray[ep][1],agentArray[ep][2] ,self.policy)
+				agent = gridAgent.Agent(1,2,3,self.policy)
+				#agent = gridAgent.Agent(agentArray[ep][0],agentArray[ep][1],agentArray[ep][2] ,self.policy)
 			iterationEnd = time.time()
 			
 		print("Last Iterations Time is: {} \nAverage Episode time is: {} with a total # of successful runs: {}".format(iterationEnd - iterationStart, episodeAverageTime, totalSuccess))
 		self.policy.printOut()
 		f = open(os.path.dirname(os.path.realpath(__file__)) + "\Algorithm {} Epsilon={} Alpha={} Gamma={}.txt".format(self.policy.name, self.policy.epsilon, self.policy.alpha, self.policy.gamma),"w")
+		f.write(self.policy.writeUp())
 		f.write(writeUp)
 		f.close()

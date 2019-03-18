@@ -45,5 +45,5 @@ if choice == "Y" or choice =="y":
 	steps = int(input("Maximum steps: "))
 	
 test = GTB.testbed(mc,sa,qLearning,p1, p2, epsilon, gamma, alpha)
-test.run(iterations, episodes, steps)
+test.run(iterations, episodes, steps, False)
 input("Press Enter key to exit")
